@@ -1,5 +1,5 @@
 # Big Game Survey 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Albert1616/Simulator-Sportfy/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Albert1616/Simulator-Sportify/blob/master/LICENSE) 
 
 # Sobre o projeto
 
