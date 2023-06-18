@@ -1,4 +1,4 @@
-# Big Game Survey 
+# Simulator Sportify 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/Albert1616/Simulator-Sportfy/blob/main/LICENSE) 
 
 # Sobre o projeto
