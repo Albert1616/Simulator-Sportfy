@@ -18,17 +18,15 @@ Para a ordenação dos conjuntos, forma ultilizados três métodos diferentes de
 ![Modelo Conceitual](https://github.com/Albert1616/Simulator-Sportify/blob/master/assets/Simulator%20Sportyfi%20(1).png)
 
 # Tecnologias utilizadas
-## Back end
 - C++
  
 # Como executar o projeto
--Basta executar o comando 'make' na pasta /Makefile
+- Basta executar o comando 'make' na pasta /Makefile
 
 # clonar repositório
-git clone https://github.com/Albert1616/Simulator-Sportify
+- git clone https://github.com/Albert1616/Simulator-Sportify
 
 # Autor
-
 Matheus Albert da Silva Araújo
 
 --linkedin
