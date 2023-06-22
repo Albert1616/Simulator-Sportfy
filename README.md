@@ -15,7 +15,7 @@ vazia e retornar a quantidade de elementos da pilha. Enquanto que o conjunto arm
 Para a ordenação dos conjuntos, forma ultilizados três métodos diferentes de ordenação, sendo eles: Buble Sort, Insetion Sort e o Quick Sort. O Buble Sort, de um modo geral, realiza compações sucessivas entre os elementos e se estiverem fora de ordem são trocados; ele possui complexidade Θ(n^2) tanto para o melhor quanto para o pior caso. O Insertion Sort tem sua ideia fundamentada da sequinte forma: é construida a lista ordenada um elemento de cada vez, inserindo cada elemento na posição correta; ele possui complexidade Θ(n^2) no pior caso, quando o vetor está ordenada em ordem inversa, e complexidade Θ(n) no melhor caso, quando o vetor ja está ordenado.A ideia geral do Quick Sort é selecionar um elemento da lista como pivô e particionar a lista ao redor do pivô, colocando os elementos menores do que o pivô à esquerda e os elementos maiores à direita; sua complexidade é Θ(n*log2n) para o melhor caso e no pior caso,no qual o pivô é escolhido de forma inadeguada, é Θ(n^2).
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/Albert1616/Simulator-Sportify/blob/master/assets/Simulator%20Sportyfi%20(1).png)
+![Modelo Conceitual](https://github.com/Albert1616/Simulator-Sportify/blob/master/assets/Simulator%20Sportyfi%20%20-%20diagram%20class.png)
 
 # Tecnologias utilizadas
 - C++
