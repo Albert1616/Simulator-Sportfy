@@ -1,5 +1,8 @@
-#include "Artista.h"
+#ifndef MUSICA_H
+#define MUSICA_H
+
 #include <string>
+#include "Artista.h"
 using namespace std;
 
 class Musica{
@@ -11,11 +14,14 @@ class Musica{
         int numeroReproducoes;
     public:
         Musica();
-        Musica(string t, Artista a,int ano, string g);
+        Musica(string t,int ano, string g,int numprod,Artista a = Artista("Desconhecido"));
         ~Musica();
         string getTitulo();
-        string getArtista();
+        void setArtista(Artista& a);
+        Artista getArtista();
         int getAnoLancamento();
         int getnumeroReproducoes();
         string getGenero();
-}
+};
+
+#endif

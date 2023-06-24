@@ -1,17 +1,23 @@
+#ifndef ARTISTA_H
+#define ARTISTA_H
+
 #include <string>
-#include "Musica.h"
 #include "Stack.h"
 
 using namespace std;
+class Musica;
 
 class Artista{
     private:
         string nome;
-        Stack<Musica> musicas;
+        Stack musicas;
     public:
         Artista();
         Artista(string n);
         ~Artista();
         string getNome();
         void adicionarMusica(Musica m);
+        void imprimiMusicas();
 };
+
+#endif

@@ -1,6 +1,7 @@
 #include "Artista.h"
 #include "Musica.h"
 #include "Stack.h"
+#include "Set.h"
 #include <string>
 #include <fstream>
 using namespace std;
@@ -17,14 +18,16 @@ class Perfil{
         ~Perfil();
         string getNome();
         string getEmail();
-        void adicionarMusica(Musica m);
-        void removerMusica(Musica m);
-        void adicionarArtista(Artista a);
-        void removerArtista(Artista a);
-        void buscarMusica(Musica m);
-        void buscarArtista(Artista a);
-        void compartilhaMusica(Musica m, Perfil p);
+        bool adicionarMusica(Musica m);
+        bool removerMusica(Musica m);
+        bool adicionarArtista(Artista a);
+        bool removerArtista(Artista a);
+        bool buscarMusica(Musica m);
+        bool buscarArtista(Artista a);
+        bool compartilhaMusica(Musica m, Perfil p);
         void ordenaMusica();
         void ordenaArtista();
         void salvarPlaylist(ifstream &arq);
-}
+        void imprimirMusicas();
+        void imprimirArtistas();
+};
