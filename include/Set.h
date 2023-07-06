@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include "../include/Busca.h"
+#include "../include/Artista.h"
+#include "../include/Musica.h"
 
 using namespace std;
 
@@ -22,11 +24,11 @@ class Set{
 
 template <typename T>
 Set<T>::~Set(){
-    elementos = nullptr;
+    
 };
 template <typename T>
 bool Set<T>::buscarElemento(T elemento){
-    int TipoBusca;
+    /* int TipoBusca;
     cout << "Qual tipo de busca vc deseja fazer?" << endl;
     cout << "1 : binaria ou 2 : iterativa ?" << endl;
     cout << "0 : SAIR" << endl; 
@@ -51,19 +53,20 @@ bool Set<T>::buscarElemento(T elemento){
         cout << "Saindo..." << endl;
         return false;
         break;
-    }
+    } */
+    return Busca_iterativa(elementos, elemento);
 }
 
 template <typename T>
 bool Set<T>::inserirElemento(T elemento){
-    if(!this->buscarElemento(elemento,0)){
+    if(!this->buscarElemento(elemento)){
         elementos.push_back(elemento);
         return true;
     }
 };
 template <typename T>
 bool Set<T>::removerElemento(T elemento){
-    if(this->buscarElemento(elemento,0)){
+    if(this->buscarElemento(elemento)){
         for(int i = 0; i<elementos.size();i++){
             if(elementos[i] == elemento){
                 elementos.erase(elementos.begin() + i);
@@ -73,6 +76,33 @@ bool Set<T>::removerElemento(T elemento){
     }
     return false;
 };
+
+/* template <>
+bool Set<Musica>::removerElemento(Musica elemento){
+    if(this->buscarElemento(elemento)){
+        for(int i = 0; i<elementos.size();i++){
+            if(elementos[i].getTitulo() == elemento.getTitulo()){
+                elementos.erase(elementos.begin() + i);
+                return true;
+            }
+        }
+    }
+    return false;
+};
+template <>
+bool Set<Artista>::removerElemento(Artista elemento){
+    if(this->buscarElemento(elemento)){
+        for(int i = 0; i<elementos.size();i++){
+            if(elementos[i].getNome() == elemento.getNome()){
+                elementos.erase(elementos.begin() + i);
+                return true;
+            }
+        }
+    }
+    return false;
+}; */
+
+
 template <typename T>
 int Set<T>::getSize(){
     return this->elementos.size();

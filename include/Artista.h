@@ -1,6 +1,7 @@
 #ifndef ARTISTA_H
 #define ARTISTA_H
 
+#include <iostream>
 #include <string>
 #include "Stack.h"
 
@@ -18,6 +19,8 @@ class Artista{
         string getNome();
         void adicionarMusica(Musica m);
         void imprimiMusicas();
+        friend bool operator==(const Artista& a1,const Artista& a2);
+        friend std::ostream& operator<<(std::ostream& obj, const Artista& m);
 };
 
 #endif

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../include/Artista.h"
 #include "../include/Musica.h"
 
@@ -22,3 +23,11 @@ void Artista::adicionarMusica(Musica m){
 void Artista::imprimiMusicas(){
     this->musicas.imprimirElmentos();
 };
+bool operator==(const Artista& a1,const Artista& a2){
+    return a1.nome == a2.nome;
+};
+std::ostream& operator<<(std::ostream& obj, const Artista& m){
+    obj << m.nome;
+    return obj;
+};
+

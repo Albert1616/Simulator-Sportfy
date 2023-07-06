@@ -1,6 +1,7 @@
 #ifndef MUSICA_H
 #define MUSICA_H
 
+#include <ostream>
 #include <string>
 #include "Artista.h"
 using namespace std;
@@ -22,6 +23,8 @@ class Musica{
         int getAnoLancamento();
         int getnumeroReproducoes();
         string getGenero();
+        friend bool operator==(const Musica& m1, const Musica& m2);
+        friend std::ostream& operator<<(std::ostream& obj, const Musica& m);
 };
 
 #endif

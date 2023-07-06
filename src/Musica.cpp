@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../include/Artista.h"
 #include "../include/Musica.h"
 
@@ -35,4 +36,12 @@ int Musica::getAnoLancamento(){
 
 int Musica::getnumeroReproducoes(){
     return this->numeroReproducoes;
+};
+
+bool operator==(const Musica& m1, const Musica& m2){
+    return m1.titulo == m2.titulo;
+};
+std::ostream& operator<<(std::ostream& obj, const Musica& m){
+    obj << m.titulo;
+    return obj;
 };
