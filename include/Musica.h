@@ -25,6 +25,8 @@ class Musica{
         string getGenero();
         friend bool operator==(const Musica& m1, const Musica& m2);
         friend std::ostream& operator<<(std::ostream& obj, const Musica& m);
+        friend bool operator<(const Musica& m1, const Musica& m2);
+        friend bool operator>(const Musica& m1, const Musica& m2);
 };
 
 #endif

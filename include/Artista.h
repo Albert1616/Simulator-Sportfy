@@ -21,6 +21,8 @@ class Artista{
         void imprimiMusicas();
         friend bool operator==(const Artista& a1,const Artista& a2);
         friend std::ostream& operator<<(std::ostream& obj, const Artista& m);
+        friend bool operator<(const Artista& m1, const Artista& m2);
+        friend bool operator>(const Artista& m1, const Artista& m2);
 };
 
 #endif

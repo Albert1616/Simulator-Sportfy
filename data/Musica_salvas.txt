@@ -1,0 +1,4 @@
+Titulo              Ano     Genero    Número de reproduções    Artista             
+Dont                1960    rock      155000                Desconhecido                
+Dont be cruel       1960    rock      54000                 Desconhecido                
+Trouble             1960    rock      5000                  Desconhecido                

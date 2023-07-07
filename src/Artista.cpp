@@ -30,4 +30,10 @@ std::ostream& operator<<(std::ostream& obj, const Artista& m){
     obj << m.nome;
     return obj;
 };
+bool operator<(const Artista& m1, const Artista& m2){
+    return m1.nome < m2.nome;
+}
+bool operator>(const Artista& m1, const Artista& m2){
+    return m1.nome > m2.nome;
+}
 

@@ -17,9 +17,11 @@ class Set{
         ~Set<T>();
         bool inserirElemento(T elemento);
         bool removerElemento(T elemento);
-        bool buscarElemento(T elemento);
+        bool buscarElemento(T elemento,int TipoBusca = 2);
         void imprimirElementos();
         int getSize();
+        vector<T> getElementos();
+        void setElementos(std::vector<T>&);
 };
 
 template <typename T>
@@ -27,34 +29,17 @@ Set<T>::~Set(){
     
 };
 template <typename T>
-bool Set<T>::buscarElemento(T elemento){
-    /* int TipoBusca;
-    cout << "Qual tipo de busca vc deseja fazer?" << endl;
-    cout << "1 : binaria ou 2 : iterativa ?" << endl;
-    cout << "0 : SAIR" << endl; 
-    cin >> TipoBusca;
-
-    while(TipoBusca!=1 && TipoBusca!=2 & TipoBusca!=0){
-        cout << "Digite uma opcao valida!" << endl;
-        cout << "Qual tipo de busca vc deseja fazer?" << endl;
-        cout << "1 : binaria ou 2 : iterativa ?" << endl;
-        cout << "0 : SAIR" << endl; 
-        cin >> TipoBusca;
-    }
+bool Set<T>::buscarElemento(T elemento,int TipoBusca){
     switch (TipoBusca)
     {
     case 1:
         return Busca_binaria(0, elementos.size()-1, elemento, elementos);
         break;
-    case 2:
+    default:
         return Busca_iterativa(elementos, elemento);
         break;
-    default:
-        cout << "Saindo..." << endl;
-        return false;
-        break;
-    } */
-    return Busca_iterativa(elementos, elemento);
+    }
+    return false;
 }
 
 template <typename T>
@@ -77,32 +62,6 @@ bool Set<T>::removerElemento(T elemento){
     return false;
 };
 
-/* template <>
-bool Set<Musica>::removerElemento(Musica elemento){
-    if(this->buscarElemento(elemento)){
-        for(int i = 0; i<elementos.size();i++){
-            if(elementos[i].getTitulo() == elemento.getTitulo()){
-                elementos.erase(elementos.begin() + i);
-                return true;
-            }
-        }
-    }
-    return false;
-};
-template <>
-bool Set<Artista>::removerElemento(Artista elemento){
-    if(this->buscarElemento(elemento)){
-        for(int i = 0; i<elementos.size();i++){
-            if(elementos[i].getNome() == elemento.getNome()){
-                elementos.erase(elementos.begin() + i);
-                return true;
-            }
-        }
-    }
-    return false;
-}; */
-
-
 template <typename T>
 int Set<T>::getSize(){
     return this->elementos.size();
@@ -112,6 +71,14 @@ void Set<T>::imprimirElementos(){
     for(int i = 0; i<elementos.size();i++){
         cout << elementos[i] << endl;
     };
+}
+template <typename T>
+vector<T> Set<T>::getElementos(){
+    return this->elementos;
+};
+template <typename T>
+void Set<T>::setElementos(std::vector<T>& elementos){
+    this->elementos = elementos;
 }
 
 #endif

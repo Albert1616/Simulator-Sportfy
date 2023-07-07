@@ -45,3 +45,9 @@ std::ostream& operator<<(std::ostream& obj, const Musica& m){
     obj << m.titulo;
     return obj;
 };
+bool operator<(const Musica& m1, const Musica& m2){
+    return m1.numeroReproducoes < m2.numeroReproducoes;
+}
+bool operator>(const Musica& m1, const Musica& m2){
+    return m1.numeroReproducoes > m2.numeroReproducoes;
+}

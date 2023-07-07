@@ -24,10 +24,10 @@ class Perfil{
         bool removerArtista(Artista a);
         bool buscarMusica(Musica m);
         bool buscarArtista(Artista a);
-        bool compartilhaMusica(Musica m, Perfil p);
         void ordenaMusica();
         void ordenaArtista();
-        void salvarPlaylist(ifstream &arq);
+        void salvarPlaylist(ofstream &arq);
+        void recuperarPlaylist(ifstream &arq);
         void imprimirMusicas();
         void imprimirArtistas();
 };

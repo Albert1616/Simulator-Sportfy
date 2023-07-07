@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include "../include/Stack.h"
 /* #include "../include/Busca.h" */
 #include "../include/Set.h"
 #include "../include/Musica.h"
 #include "../include/Artista.h"
 #include "../include/Perfil.h"
+#include "../include/Busca.h"
 
 using namespace std;
 const string password = "12345";
@@ -15,12 +17,37 @@ int main()
     Perfil a("Matheus", "matheus@gmail.com");
     cout << a.getNome() << " " << a.getEmail() << endl;
     a.adicionarArtista(Artista("Elvis"));
-    a.adicionarMusica(Musica("Dont be cruel",1960, "rock", 5000));
-    a.imprimirArtistas();
+    a.adicionarArtista(Artista("Carlos"));
+    a.adicionarArtista(Artista("Felipe"));
+    std::ifstream arq;
+    a.recuperarPlaylist(arq);
     a.imprimirMusicas();
-    if(a.buscarMusica(Musica("Dontcruel",1960, "rock", 5000))){
-        cout << "Encontrada!" << endl;
+    /* a.adicionarMusica(Musica("Dont be cruel",1960, "rock", 54000));
+    a.adicionarMusica(Musica("Dont",1960, "rock", 155000));
+    a.adicionarMusica(Musica("Trouble",1960, "rock", 5000));
+    a.ordenaMusica(); */
+    /* a.imprimirMusicas();
+    if(a.buscarMusica(Musica("Dont",1960, "rock", 54000))){
+        cout<<"Musica encontrada!" << endl;
     };
+    if(a.buscarArtista(Artista("Elvi"))){
+        cout << "Artista encontrado!" << endl;
+    }; */
+    /* cout << "ANTES DE ORDENAR" << endl;
+    cout << "Artistas:" << endl;
+    a.imprimirArtistas();
+    cout << "Musicas:" << endl;
+    a.imprimirMusicas(); */
+    /* if(a.buscarMusica(Musica("Dontcruel",1960, "rock", 5000))){
+        cout << "Encontrada!" << endl;
+    }; */
+    /* a.ordenaArtista();
+    a.ordenaMusica();
+    cout << "DEPOIS DE ORDENAR" << endl;
+    cout << "Artistas:" << endl;
+    a.imprimirArtistas();
+    cout << "Musicas:" << endl;
+    a.imprimirMusicas(); */
 
     /* int op;
     vector<Artista> artistas_cadastrados;
