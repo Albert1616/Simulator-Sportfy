@@ -1,30 +1,16 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "../include/Stack.h"
-/* #include "../include/Busca.h" */
-#include "../include/Set.h"
-#include "../include/Musica.h"
-#include "../include/Artista.h"
-#include "../include/Perfil.h"
-#include "../include/Busca.h"
-
+#include "../include/Menu.h"
 using namespace std;
-const string password = "12345";
 
 int main()
 {
-    Perfil a("Matheus", "matheus@gmail.com");
-    cout << a.getNome() << " " << a.getEmail() << endl;
-    a.adicionarArtista(Artista("Elvis"));
-    a.adicionarArtista(Artista("Carlos"));
-    a.adicionarArtista(Artista("Felipe"));
-    std::ifstream arq;
-    a.recuperarPlaylist(arq);
-    a.imprimirMusicas();
-    /* a.adicionarMusica(Musica("Dont be cruel",1960, "rock", 54000));
-    a.adicionarMusica(Musica("Dont",1960, "rock", 155000));
-    a.adicionarMusica(Musica("Trouble",1960, "rock", 5000));
+    vector<Artista> artistasCadastrados;
+    vector<Musica> musicasCadastradas;
+    musicasCadastradas.push_back(Musica("Love me", 1950, "romantico", 200, Artista("Elvis")));
+    menu(musicasCadastradas,artistasCadastrados);
+    /* ;
     a.ordenaMusica(); */
     /* a.imprimirMusicas();
     if(a.buscarMusica(Musica("Dont",1960, "rock", 54000))){

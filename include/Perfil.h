@@ -18,11 +18,13 @@ class Perfil{
         ~Perfil();
         string getNome();
         string getEmail();
+        int numMusicas();
+        int numArtistas();
         bool adicionarMusica(Musica m);
         bool removerMusica(Musica m);
         bool adicionarArtista(Artista a);
         bool removerArtista(Artista a);
-        bool buscarMusica(Musica m);
+        bool buscarMusica(string nome);
         bool buscarArtista(Artista a);
         void ordenaMusica();
         void ordenaArtista();

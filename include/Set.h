@@ -17,19 +17,18 @@ class Set{
         ~Set<T>();
         bool inserirElemento(T elemento);
         bool removerElemento(T elemento);
-        bool buscarElemento(T elemento,int TipoBusca = 2);
+        bool buscarElemento(T& elemento,int TipoBusca = 2);
         void imprimirElementos();
         int getSize();
         vector<T> getElementos();
         void setElementos(std::vector<T>&);
 };
-
 template <typename T>
 Set<T>::~Set(){
     
 };
 template <typename T>
-bool Set<T>::buscarElemento(T elemento,int TipoBusca){
+bool Set<T>::buscarElemento(T& elemento,int TipoBusca){
     switch (TipoBusca)
     {
     case 1:
@@ -69,7 +68,7 @@ int Set<T>::getSize(){
 template <typename T>
 void Set<T>::imprimirElementos(){
     for(int i = 0; i<elementos.size();i++){
-        cout << elementos[i] << endl;
+        cout << i << " : " << elementos[i] << endl;
     };
 }
 template <typename T>
