@@ -10,30 +10,26 @@ Perfil::Perfil()
 {
     this->nome = "Não informado!";
     this->email = "Não informado!";
-};
-
+}
 Perfil::Perfil(string n, string e)
 {
     this->nome = n;
     this->email = e;
-};
-
+}
 Perfil::~Perfil(){};
 
 string Perfil::getNome()
 {
     return this->nome;
-};
-
+}
 string Perfil::getEmail()
 {
     return this->email;
-};
-
+}
 bool Perfil::adicionarMusica(Musica m)
 {
     return this->musicasFavoritas.inserirElemento(m);
-};
+}
 bool Perfil::removerMusica(Musica m)
 {
     return this->musicasFavoritas.removerElemento(m);
@@ -41,23 +37,25 @@ bool Perfil::removerMusica(Musica m)
 bool Perfil::adicionarArtista(Artista m)
 {
     return this->artistasFavoritos.inserirElemento(m);
-};
+}
 bool Perfil::removerArtista(Artista m)
 {
     return this->artistasFavoritos.removerElemento(m);
-};
-int Perfil::numMusicas(){
+}
+int Perfil::numMusicas()
+{
     return musicasFavoritas.getSize();
-};
-int Perfil::numArtistas(){
+}
+int Perfil::numArtistas()
+{
     return artistasFavoritos.getSize();
-};
+}
 void Perfil::ordenaArtista()
 {
     vector<Artista> a = artistasFavoritos.getElementos();
     insertionSort(a);
     artistasFavoritos.setElementos(a);
-};
+}
 void Perfil::ordenaMusica()
 {
     vector<Musica> m = musicasFavoritas.getElementos();
@@ -66,22 +64,23 @@ void Perfil::ordenaMusica()
 }
 bool Perfil::buscarMusica(string nome)
 {
-    Musica m(nome, 0, "-",0);
+    Musica m(nome, 0, "-", 5000);
     this->ordenaMusica();
-    return musicasFavoritas.buscarElemento(m, 1);
-};
-bool Perfil::buscarArtista(Artista a)
+    return musicasFavoritas.buscarElemento(m, 2);
+}
+bool Perfil::buscarArtista(string nome)
 {
+    Artista a(nome);
     return artistasFavoritos.buscarElemento(a, 2);
-};
+}
 void Perfil::imprimirMusicas()
 {
     this->musicasFavoritas.imprimirElementos();
-};
+}
 void Perfil::imprimirArtistas()
 {
     this->artistasFavoritos.imprimirElementos();
-};
+}
 void Perfil::salvarPlaylist(std::ofstream &arq)
 {
     arq.open("../data/Musica_salvas.txt");
@@ -109,7 +108,7 @@ void Perfil::salvarPlaylist(std::ofstream &arq)
     }
     arq.close();
 }
-void Perfil::recuperarPlaylist(ifstream& arq)
+void Perfil::recuperarPlaylist(ifstream &arq)
 {
     arq.open("../data/Musica_salvas.txt");
     string line;
@@ -140,4 +139,3 @@ void Perfil::recuperarPlaylist(ifstream& arq)
         cout << "Arquivo não foi aberto" << endl;
     }
 }
-

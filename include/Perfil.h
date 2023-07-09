@@ -25,7 +25,7 @@ class Perfil{
         bool adicionarArtista(Artista a);
         bool removerArtista(Artista a);
         bool buscarMusica(string nome);
-        bool buscarArtista(Artista a);
+        bool buscarArtista(string nome);
         void ordenaMusica();
         void ordenaArtista();
         void salvarPlaylist(ofstream &arq);

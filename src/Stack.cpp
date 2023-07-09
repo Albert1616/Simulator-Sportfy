@@ -9,9 +9,7 @@ bool Stack::isEmpity(){
         return true;
     }
     return false;
-};
-
-
+}
 string Stack::top(){
     if(!this->isEmpity()){
         return elementos.back().getTitulo();
@@ -19,8 +17,7 @@ string Stack::top(){
         cout << "A pilha esta vazia!" << endl;
         return 0;
     };
-};
-
+}
 bool Stack::find(Musica elemento){
     for(int i = 0; i<elementos.size(); i++){
         if(elementos[i].getTitulo() == elemento.getTitulo()){
@@ -28,8 +25,7 @@ bool Stack::find(Musica elemento){
         }
     }
     return false;
-};
-
+}
 bool Stack::push(Musica elemento){
     if(!this->find(elemento)){
         elementos.push_back(elemento);
@@ -39,7 +35,6 @@ bool Stack::push(Musica elemento){
         return false;
     };
 }
-
 bool Stack::pop(){
     if(!this->isEmpity()){
         elementos.pop_back();
@@ -49,11 +44,9 @@ bool Stack::pop(){
         return false;
     }
 }
-
 int Stack::getSize(){
     return elementos.size();
-};
-
+}
 void Stack::imprimirElmentos(){
     for(int i = 0; i<elementos.size();i++){
         cout << elementos[i].getTitulo() << " ";
