@@ -19,7 +19,7 @@ public:
     ~Set<T>();
     bool inserirElemento(T elemento);
     bool removerElemento(T &elemento);
-    bool buscarElemento(T &elemento, int TipoBusca = 2);
+    bool buscarElemento(T elemento, int TipoBusca = 2);
     void imprimirElementos();
     int getSize();
     vector<T> getElementos();
@@ -30,11 +30,15 @@ Set<T>::~Set()
 {
 }
 template <typename T>
-bool Set<T>::buscarElemento(T &elemento, int TipoBusca)
+bool Set<T>::buscarElemento(T elemento, int TipoBusca)
 {
     switch (TipoBusca)
     {
     case 1:
+        this->imprimirElementos();
+        cout << endl;
+        /* cout << elementos.size() << endl;
+        cout << elemento << endl; */
         return Busca_binaria(0, elementos.size() - 1, elemento, elementos);
         break;
     default:
@@ -57,16 +61,20 @@ bool Set<T>::inserirElemento(T elemento)
 template <typename T>
 bool Set<T>::removerElemento(T &elemento)
 {
-    cout << "Esta aqui" << elemento.getTitulo() << endl;
-    for (int i = 0; i < elementos.size(); i++)
+    if (this->buscarElemento(elemento))
     {
-        if (elementos[i] == elemento)
+        cout << "Buscado: " << elemento << endl;
+        for (int i = 0; i < elementos.size(); i++)
         {
-            elementos.erase(elementos.begin() + i);
-            return true;
+            cout << i << "Elemento da lista: " << elementos[i] << endl;
+            if (elementos[i] == elemento)
+            {
+                cout << "Sao iguais" << endl;
+                elementos.erase(elementos.begin() + i);
+                return true;
+            }
         }
     }
-
     return false;
 }
 

@@ -62,11 +62,10 @@ void Perfil::ordenaMusica()
     bubleSort(m);
     musicasFavoritas.setElementos(m);
 }
-bool Perfil::buscarMusica(string nome)
+bool Perfil::buscarMusica(Musica m)
 {
-    Musica m(nome, 0, "-", 5000);
     this->ordenaMusica();
-    return musicasFavoritas.buscarElemento(m, 2);
+    return musicasFavoritas.buscarElemento(m, 1);
 }
 bool Perfil::buscarArtista(string nome)
 {
@@ -138,4 +137,10 @@ void Perfil::recuperarPlaylist(ifstream &arq)
     {
         cout << "Arquivo não foi aberto" << endl;
     }
+}
+vector<Musica> Perfil::getMusicas(){
+    return musicasFavoritas.getElementos();
+}
+vector<Artista> Perfil::getArtistas(){
+    return artistasFavoritos.getElementos();
 }

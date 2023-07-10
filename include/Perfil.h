@@ -24,7 +24,7 @@ class Perfil{
         bool removerMusica(Musica m);
         bool adicionarArtista(Artista a);
         bool removerArtista(Artista a);
-        bool buscarMusica(string nome);
+        bool buscarMusica(Musica m);
         bool buscarArtista(string nome);
         void ordenaMusica();
         void ordenaArtista();
@@ -32,4 +32,6 @@ class Perfil{
         void recuperarPlaylist(ifstream &arq);
         void imprimirMusicas();
         void imprimirArtistas();
+        vector<Musica> getMusicas();
+        vector<Artista> getArtistas();
 };

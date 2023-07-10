@@ -43,7 +43,18 @@ bool operator==(const Musica &m1, const Musica &m2)
     string musica2 = m2.titulo;
     std::transform(musica1.begin(), musica1.end(), musica1.begin(), ::tolower);
     std::transform(musica2.begin(), musica2.end(), musica2.begin(), ::tolower);
-    return musica1 == musica2;
+    musica1.erase(std::remove_if(musica1.begin(), musica1.end(), ::isspace), musica1.end());
+    musica2.erase(std::remove_if(musica2.begin(), musica2.end(), ::isspace), musica2.end());
+
+    string genero1 = m1.genero;
+    string genero2 = m2.genero;
+    std::transform(genero1.begin(), genero1.end(), genero1.begin(), ::tolower);
+    std::transform(genero2.begin(), genero2.end(), genero2.begin(), ::tolower);
+    genero1.erase(std::remove_if(genero1.begin(), genero1.end(), ::isspace), genero1.end());
+    genero2.erase(std::remove_if(genero2.begin(), genero2.end(), ::isspace), genero2.end());
+    return ((musica1 == musica2)&&(m1.anoLancamento == m2.anoLancamento)&&
+    (m1.genero == m2.genero) && (m1.numeroReproducoes == m2.numeroReproducoes)
+    &&(m1.artista == m2.artista));
 }
 std::ostream &operator<<(std::ostream &obj, const Musica &m)
 {

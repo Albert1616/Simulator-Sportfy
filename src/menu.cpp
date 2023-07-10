@@ -5,7 +5,7 @@
 using namespace std;
 const string password = "1234";
 
-void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
+void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
 {
     setlocale(LC_ALL, "portuguese");
     int op;
@@ -40,9 +40,9 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
             while (true)
             {
                 cout << "O que deseja fazer?" << endl;
-                cout << "1. Cadastrar musica" << endl;
+                cout << "1. Cadastrar música" << endl;
                 cout << "2. Cadastrar artista" << endl;
-                cout << "3. Listar musicas cadastradas" << endl;
+                cout << "3. Listar músicas cadastradas" << endl;
                 cout << "4. Listar artistas cadastrados" << endl;
                 cout << "0. Para retornar a tela anterior" << endl;
                 cin >> op_adm;
@@ -51,16 +51,16 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                 {
                     string name = "", genero = "", nameArtista = "";
                     int ano, numprod;
-                    cout << "Digite o nome da musica" << endl;
+                    cout << "Digite o nome da música" << endl;
                     cin >> name;
                     system("cls");
-                    cout << "Digite o genero da musica" << endl;
+                    cout << "Digite o gênero da música" << endl;
                     cin >> genero;
                     system("cls");
-                    cout << "Digite o ano de lancamento da musica" << endl;
+                    cout << "Digite o ano de lançamento da música" << endl;
                     cin >> ano;
                     system("cls");
-                    cout << "Digite o numero de vezes que foi tocada" << endl;
+                    cout << "Digite o número de vezes que foi tocada" << endl;
                     cin >> numprod;
                     system("cls");
                     cout << "Digite o nome do artista" << endl;
@@ -68,7 +68,7 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                     system("cls");
                     Artista a(nameArtista);
                     Musica m(name, ano, genero, numprod, a);
-                    lst_musicas.push_back(m);
+                    lst_músicas.push_back(m);
                 }
                 else if (op_adm == 2)
                 {
@@ -90,11 +90,11 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                     }
                     if (op == "s")
                     {
-                        int op_musica;
+                        int op_música;
                         cout << "Músicas disponíveis: " << endl;
-                        for (int i = 0; i < lst_musicas.size(); i++)
+                        for (int i = 0; i < lst_músicas.size(); i++)
                         {
-                            cout << i + 1 << ": " << lst_musicas[i].getTitulo() << endl;
+                            cout << i + 1 << ": " << lst_músicas[i].getTitulo() << endl;
                         }
                         do
                         {
@@ -102,20 +102,20 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                             cout << "Qual o número da música que você deseja adicionar ao artista?" << endl;
                             cin >> op;
                             system("cls");
-                            if (op >= 0 && op < lst_musicas.size())
+                            if (op >= 0 && op < lst_músicas.size())
                             {
-                                a.adicionarMusica(lst_musicas[op]);
+                                a.adicionarMusica(lst_músicas[op]);
                                 cout << "Música adicionada com sucesso!" << endl;
                                 cout << "Se deseja adicionar outra música para o artista, digite 1. Caso contrário, digite qualquer outra tecla." << endl;
-                                cin >> op_musica;
+                                cin >> op_música;
                                 system("cls");
                             }
                             else
                             {
                                 cout << "Este número não existe! Digite um número válido." << endl;
-                                op_musica = 1; // Continuar pedindo a música válida
+                                op_música = 1;
                             }
-                        } while (op_musica == 1);
+                        } while (op_música == 1);
                         cout << "Artista adicionado com sucesso!" << endl;
                     }
                     else
@@ -125,9 +125,9 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                 }
                 else if (op_adm == 3)
                 {
-                    for (int i = 0; i < lst_musicas.size(); i++)
+                    for (int i = 0; i < lst_músicas.size(); i++)
                     {
-                        cout << i << ":" << lst_musicas[i].getTitulo() << endl;
+                        cout << i << ":" << lst_músicas[i].getTitulo() << endl;
                     }
                 }
                 else if (op_adm == 4)
@@ -190,18 +190,26 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                     while (true)
                     {
                         cout << "Músicas disponíveis: " << endl;
-                        for (int i = 0; i < lst_musicas.size(); i++)
+                        for (int i = 0; i < lst_músicas.size(); i++)
                         {
-                            cout << i << ": " << lst_musicas[i].getTitulo() << endl;
+                            cout << i << ": " << lst_músicas[i].getTitulo() << endl;
                         }
                         cout << "Qual o número da música que você deseja adicionar?" << endl;
                         cin >> op;
                         system("cls");
-                        if (op >= 0 && op < lst_musicas.size())
+                        if (op >= 0 && op < lst_músicas.size())
                         {
-                            p.adicionarMusica(lst_musicas[op]);
-                            cout << "Música adicionada com sucesso!" << endl;
-                            break;
+                            if (p.buscarMusica(lst_músicas[op]))
+                            {
+                                cout << "Essa música ja está na sua playlist!" << endl;
+                                break;
+                            }
+                            else
+                            {
+                                p.adicionarMusica(lst_músicas[op]);
+                                cout << "Música adicionada com sucesso!" << endl;
+                                break;
+                            }
                         }
                         else
                         {
@@ -213,7 +221,7 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                 {
                     if (p.numMusicas() == 0)
                     {
-                        cout << "Voce nao tem musicas favoritas para remover!" << endl;
+                        cout << "Voce não tem músicas favoritas para remover!" << endl;
                     }
                     else
                     {
@@ -227,8 +235,8 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                             system("cls");
                             if (op >= 0 && op < p.numMusicas())
                             {
-                                cout << lst_musicas[op].getTitulo();
-                                p.removerMusica(lst_musicas[op]);
+                                vector<Musica> auxiliar = p.getMusicas();
+                                p.removerMusica(auxiliar[op]);
                                 cout << "Música removida com sucesso!" << endl;
                                 break;
                             }
@@ -268,7 +276,7 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                 {
                     if (p.numArtistas() == 0)
                     {
-                        cout << "Voce nao tem artistas favoritos para remover!" << endl;
+                        cout << "Voce não tem artistas favoritos para remover!" << endl;
                     }
                     else
                     {
@@ -282,9 +290,17 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                             system("cls");
                             if (op >= 0 && op < p.numArtistas())
                             {
-                                p.removerArtista(lst_artista[op]);
-                                cout << "Artista removido com sucesso!" << endl;
-                                break;
+                                if (p.buscarArtista(lst_artista[op].getNome()))
+                                {
+                                    cout << "Este artista ja está entre os seus favoritos!" << endl;
+                                    break;
+                                }
+                                else
+                                {
+                                    p.removerArtista(lst_artista[op]);
+                                    cout << "Artista removido com sucesso!" << endl;
+                                    break;
+                                }
                             }
                             else
                             {
@@ -295,18 +311,34 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                 }
                 else if (op_user == 5)
                 {
-                    string nome;
-                    cout << "Digite o nome da musica que vc deseja buscar" << endl;
+                    string nome, genero, nomeArtista;
+                    int ano, numReproducao;
+                    cout << "Digite o nome da música que vc deseja buscar" << endl;
                     cin.ignore();
                     getline(cin, nome);
                     system("cls");
-                    if (p.buscarMusica(nome))
+                    cout << "Digite o ano de lançamento" << endl;
+                    cin >> ano;
+                    system("cls");
+                    cout << "Digite o genero" << endl;
+                    cin.ignore();
+                    getline(cin, genero);
+                    system("cls");
+                    cout << "Digite o número de reproduções" << endl;
+                    cin >> numReproducao;
+                    system("cls");
+                    cout << "Digite o nome do artista a que ela pertence" << endl;
+                    cin.ignore();
+                    getline(cin, nomeArtista);
+                    system("cls");
+                    Musica busca(nome, ano, genero, numReproducao, Artista(nomeArtista));
+                    if (p.buscarMusica(busca))
                     {
-                        cout << "A musica " << nome << " faz parte das suas musicas favoritas!" << endl;
+                        cout << "A música " << nome << " faz parte das suas músicas favoritas!" << endl;
                     }
                     else
                     {
-                        cout << "A musica " << nome << " nao faz parte das suas musicas favoritas! " << endl;
+                        cout << "A música " << nome << " não faz parte das suas músicas favoritas! " << endl;
                     }
                 }
                 else if (op_user == 6)
@@ -322,51 +354,56 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                     }
                     else
                     {
-                        cout << "O artista " << nome << " nao faz parte dos artistas favoritos! " << endl;
+                        cout << "O artista " << nome << " não faz parte dos artistas favoritos! " << endl;
                     }
                 }
                 else if (op_user == 7)
                 {
                     p.ordenaMusica();
-                    cout << "Suas musicas agora estao ordenadas pelo numero de reproducoes!" << endl;
+                    cout << "Suas músicas agora estão ordenadas pelo número de reproducoes!" << endl;
                     p.imprimirMusicas();
                 }
                 else if (op_user == 8)
                 {
                     p.ordenaArtista();
-                    cout << "Seus artistas agora estao ordenados em ordem alfabetica!" << endl;
+                    cout << "Seus artistas agora estão ordenados em ordem alfabetica!" << endl;
                     p.imprimirArtistas();
                 }
                 else if (op_user == 9)
                 {
                     ofstream arq;
                     p.salvarPlaylist(arq);
-                    cout << "Sua lista de musicas favoritas foi salva!" << endl;
-                    cout << "Da proxima vez que acessar o sistema basta escolher a opcao 10 e recupera-las" << endl;
+                    cout << "Sua lista de músicas favoritas foi salva!" << endl;
+                    cout << "Da proxima vez que acessar o sistema basta escolher a opção 10 e recupera-las" << endl;
                 }
                 else if (op_user == 10)
                 {
                     ifstream arq;
                     p.recuperarPlaylist(arq);
-                    cout << "Lista de musicas recuperada com sucesso!" << endl;
+                    cout << "Lista de músicas recuperada com sucesso!" << endl;
                 }
                 else if (op_user == 11)
                 {
                     if (p.numMusicas() != 0)
                     {
-                        cout << "---------MUSICAS FAVORITAS---------" << endl;
+                        cout << "---------MÚSICAS FAVORITAS---------" << endl;
                         p.imprimirMusicas();
-                    }else{
-                        cout << "Voce nao possui musicas favoritas!" << endl;
+                    }
+                    else
+                    {
+                        cout << "Voce não possui músicas favoritas!" << endl;
                     }
                 }
                 else if (op_user == 12)
                 {
-                    if(p.numArtistas() != 0){
+                    if (p.numArtistas() != 0)
+                    {
                         cout << "---------ARTISTAS FAVORITOS---------" << endl;
                         p.imprimirArtistas();
-                    }else{
-                        cout << "Voce nao possui artistas favoritos!" << endl;
+                    }
+                    else
+                    {
+                        cout << "Voce não possui artistas favoritos!" << endl;
                     }
                 }
                 else if (op_user == 0)
@@ -375,7 +412,7 @@ void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
                 }
                 else
                 {
-                    cout << "Opcao invalida! digite uma opcao valida" << endl;
+                    cout << "opção invalida! digite uma opção valida" << endl;
                 }
             }
         }
