@@ -16,7 +16,7 @@ Perfil::Perfil(string n, string e)
     this->nome = n;
     this->email = e;
 }
-Perfil::~Perfil(){};
+Perfil::~Perfil(){}
 
 string Perfil::getNome()
 {

@@ -1,6 +1,6 @@
 Titulo              	Ano     	Genero    	Número de reproduções    	Artista             	
-Loving you          	1964    	romantico 	5021                  	Elvis                       	
-Love me             	1950    	romantico 	200                   	Elvis                       	
-Dont be cruel       	1960    	rock      	54000                 	Elvis                       	
 Dont                	1960    	rock      	155000                	Carlos                      	
+Dont be cruel       	1960    	rock      	54000                 	Elvis                       	
+Dont cry daddy             	1968    	country   	25400                 	Elvis                       	
 Trouble             	1960    	rock      	5000                  	Desconhecido                	
+Love me             	1950    	romantico 	200                   	Elvis                       	

@@ -1,0 +1,299 @@
+\hypertarget{class_set}{}\doxysection{Set\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_set}\index{Set$<$ T $>$@{Set$<$ T $>$}}
+
+
+Classe genérica \mbox{\hyperlink{class_set}{Set}} que representa uma coleção de elementos únicos.  
+
+
+
+
+{\ttfamily \#include $<$Set.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_set_aaa4abcf9b94524173e55b7301c7009f4}{$\sim$\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{class_set}{Set}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_set_aa3ff0cd368b74531b34789dc7112c4be}{inserir\+Elemento}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Insere um elemento no conjunto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_set_a81a1e8ab161da891b4762a6d0b8db336}{remover\+Elemento}} (T \&elemento)
+\begin{DoxyCompactList}\small\item\em Remove um elemento do conjunto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_set_a9d4b825e8e5cdeff2e68a882ef963e8d}{buscar\+Elemento}} (T elemento, int Tipo\+Busca=2)
+\begin{DoxyCompactList}\small\item\em Busca um elemento no conjunto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_set_ac7b4e61ce95ee8f4883b71de17a4d87e}{imprimir\+Elementos}} ()
+\begin{DoxyCompactList}\small\item\em Imprime os elementos do conjunto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_set_a3d2e0df73e2455964840fe5c668f3d81}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o tamanho do conjunto. \end{DoxyCompactList}\item 
+vector$<$ T $>$ \mbox{\hyperlink{class_set_a22e0a1ef8e0db282ccec7207db0eca11}{get\+Elementos}} ()
+\begin{DoxyCompactList}\small\item\em Obtém os elementos do conjunto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_set_a8a9d87f7543b6be1e240ad4eee747546}{set\+Elementos}} (std\+::vector$<$ T $>$ \&)
+\begin{DoxyCompactList}\small\item\em Define os elementos do conjunto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Set$<$ T $>$}
+Classe genérica \mbox{\hyperlink{class_set}{Set}} que representa uma coleção de elementos únicos. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo dos elementos no conjunto. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00018}{18}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_set_aaa4abcf9b94524173e55b7301c7009f4}\label{class_set_aaa4abcf9b94524173e55b7301c7009f4}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!````~Set@{$\sim$Set}}
+\index{````~Set@{$\sim$Set}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Set()}{~Set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_set}{Set}}}
+
+
+
+Destrutor da classe \mbox{\hyperlink{class_set}{Set}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00082}{82}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \{}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_set_a9d4b825e8e5cdeff2e68a882ef963e8d}\label{class_set_a9d4b825e8e5cdeff2e68a882ef963e8d}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!buscarElemento@{buscarElemento}}
+\index{buscarElemento@{buscarElemento}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buscarElemento()}{buscarElemento()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::buscar\+Elemento (\begin{DoxyParamCaption}\item[{T}]{elemento,  }\item[{int}]{Tipo\+Busca = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+Busca um elemento no conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elemento} & O elemento a ser buscado. \\
+\hline
+{\em Tipo\+Busca} & O tipo de busca a ser realizado (1 para busca binária, outros valores para busca iterativa). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o elemento foi encontrado, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00115}{115}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{switch}\ (TipoBusca)}
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_set_ac7b4e61ce95ee8f4883b71de17a4d87e}{imprimirElementos}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Busca\_binaria(0,\ elementos.size()\ -\/\ 1,\ elemento,\ elementos);}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Busca\_iterativa(elementos,\ elemento);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set_a22e0a1ef8e0db282ccec7207db0eca11}\label{class_set_a22e0a1ef8e0db282ccec7207db0eca11}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!getElementos@{getElementos}}
+\index{getElementos@{getElementos}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getElementos()}{getElementos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vector$<$ T $>$ \mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::get\+Elementos}
+
+
+
+Obtém os elementos do conjunto. 
+
+\begin{DoxyReturn}{Returns}
+Um vetor com os elementos do conjunto. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00147}{147}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>elementos;}
+\DoxyCodeLine{00150\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set_a3d2e0df73e2455964840fe5c668f3d81}\label{class_set_a3d2e0df73e2455964840fe5c668f3d81}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::get\+Size}
+
+
+
+Obtém o tamanho do conjunto. 
+
+\begin{DoxyReturn}{Returns}
+O tamanho do conjunto. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00141}{141}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>elementos.size();}
+\DoxyCodeLine{00144\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set_ac7b4e61ce95ee8f4883b71de17a4d87e}\label{class_set_ac7b4e61ce95ee8f4883b71de17a4d87e}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!imprimirElementos@{imprimirElementos}}
+\index{imprimirElementos@{imprimirElementos}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{imprimirElementos()}{imprimirElementos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::imprimir\+Elementos}
+
+
+
+Imprime os elementos do conjunto. 
+
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00132}{132}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ elementos.size();\ i++)}
+\DoxyCodeLine{00135\ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ cout\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ elementos[i]\ <<\ endl;}
+\DoxyCodeLine{00137\ \ \ \ \ \};}
+\DoxyCodeLine{00138\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set_aa3ff0cd368b74531b34789dc7112c4be}\label{class_set_aa3ff0cd368b74531b34789dc7112c4be}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!inserirElemento@{inserirElemento}}
+\index{inserirElemento@{inserirElemento}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inserirElemento()}{inserirElemento()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::inserir\+Elemento (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Insere um elemento no conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elemento} & O elemento a ser inserido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o elemento foi inserido com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00087}{87}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{class_set_a9d4b825e8e5cdeff2e68a882ef963e8d}{buscarElemento}}(elemento))}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ elementos.push\_back(elemento);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set_a81a1e8ab161da891b4762a6d0b8db336}\label{class_set_a81a1e8ab161da891b4762a6d0b8db336}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!removerElemento@{removerElemento}}
+\index{removerElemento@{removerElemento}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removerElemento()}{removerElemento()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::remover\+Elemento (\begin{DoxyParamCaption}\item[{T \&}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Remove um elemento do conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elemento} & Referência para o elemento a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o elemento foi removido com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00098}{98}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{class_set_a9d4b825e8e5cdeff2e68a882ef963e8d}{buscarElemento}}(elemento))}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ elementos.size();\ i++)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (elementos[i]\ ==\ elemento)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elementos.erase(elementos.begin()\ +\ i);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00112\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_set_a8a9d87f7543b6be1e240ad4eee747546}\label{class_set_a8a9d87f7543b6be1e240ad4eee747546}} 
+\index{Set$<$ T $>$@{Set$<$ T $>$}!setElementos@{setElementos}}
+\index{setElementos@{setElementos}!Set$<$ T $>$@{Set$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setElementos()}{setElementos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_set}{Set}}$<$ T $>$\+::set\+Elementos (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{elementos }\end{DoxyParamCaption})}
+
+
+
+Define os elementos do conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elementos} & O vetor com os elementos a serem definidos. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_set_8h_source_l00153}{153}} of file \mbox{\hyperlink{_set_8h_source}{Set.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ this-\/>elementos\ =\ elementos;}
+\DoxyCodeLine{00156\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Set.\+h\end{DoxyCompactItemize}

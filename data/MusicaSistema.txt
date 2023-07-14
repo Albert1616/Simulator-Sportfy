@@ -1,0 +1,17 @@
+Titulo              	Ano     	Genero    	Número de reproduções    	Artista             	
+Love me             	1950    	romantico 	200                   	Elvis                       	
+Dont be cruel       	1960    	rock      	54000                 	Elvis                       	
+Dont                	1960    	rock      	155000                	Carlos                      	
+Trouble             	1960    	rock      	5000                  	Desconhecido                	
+Save me             	1947    	pop 	750                   	Queen                       	
+Hook on the faling       	2001    	pop      	7500                 	Crazy                       	
+Paredes                	2014    	sertanejo      	455000                	Jorge e Mateus                      	
+Dont cry daddy             	1968    	country      	25400                  	Elvis                	
+Bohemiam rhapsody             	1970    	rock 	100000000                   	Queen                       	
+Respect       	1955    	rock      	540000                 	Aretha frankilyn                       	
+Mess around                	1965    	country      	245000                	Ray charles                      	
+I just called to say i love you             	1975    	pop      	154000                  	Stevie Wonder
+Someone you loved             	2017    	pop 	124500                   	Lewis Capaldi                       	
+I'am not the only one       	2018    	pop      	111420                 	Sam swith                       	
+Granade                	2012    	pop      	300045                	Bruno mars                      	
+Take me to church             	2013    	pop      	123500                  	Hozier

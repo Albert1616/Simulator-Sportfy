@@ -1,0 +1,272 @@
+\hypertarget{class_stack}{}\doxysection{Stack Class Reference}
+\label{class_stack}\index{Stack@{Stack}}
+
+
+Classe \mbox{\hyperlink{class_stack}{Stack}} que representa uma pilha de elementos.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stack_a40bd5dff912f0e5290777c4b46d17809}{$\sim$\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{class_stack}{Stack}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stack_a801bf467a9efb7003321ee076b0a8bde}{is\+Empity}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se a pilha está vazia. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_stack_a4451d896c795305c0282a8ed5dc1f3cb}{top}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o elemento no topo da pilha. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stack_ab269ac69b659812298c7712760515b91}{find}} (\mbox{\hyperlink{class_musica}{Musica}} elemento)
+\begin{DoxyCompactList}\small\item\em Verifica se um determinado elemento está na pilha. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stack_a0b8f9d25a4157a831775e1867fb80943}{push}} (\mbox{\hyperlink{class_musica}{Musica}} elemento)
+\begin{DoxyCompactList}\small\item\em Insere um elemento no topo da pilha. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stack_a9ace01ff7a826516656db5051b3c14b9}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Remove o elemento do topo da pilha. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stack_a1a9c8c5eac28e33b19e5a179543df064}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o tamanho da pilha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stack_a0b35ff31811815078e460ae6db347e9c}{imprimir\+Elmentos}} ()
+\begin{DoxyCompactList}\small\item\em Imprime os elementos da pilha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_stack}{Stack}} que representa uma pilha de elementos. 
+
+Definition at line \mbox{\hyperlink{_stack_8h_source_l00013}{13}} of file \mbox{\hyperlink{_stack_8h_source}{Stack.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_stack_a40bd5dff912f0e5290777c4b46d17809}\label{class_stack_a40bd5dff912f0e5290777c4b46d17809}} 
+\index{Stack@{Stack}!````~Stack@{$\sim$Stack}}
+\index{````~Stack@{$\sim$Stack}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{$\sim$Stack()}{~Stack()}}
+{\footnotesize\ttfamily Stack\+::$\sim$\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \mbox{\hyperlink{class_stack}{Stack}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00005\ \ \ \ \ elementos\ =\ \{\};}
+\DoxyCodeLine{00006\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stack_ab269ac69b659812298c7712760515b91}\label{class_stack_ab269ac69b659812298c7712760515b91}} 
+\index{Stack@{Stack}!find@{find}}
+\index{find@{find}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily bool Stack\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_musica}{Musica}}}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Verifica se um determinado elemento está na pilha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elemento} & O elemento a ser procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o elemento está na pilha, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i<elementos.size();\ i++)\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(elementos[i].getTitulo()\ ==\ elemento.\mbox{\hyperlink{class_musica_a6b86215d63e65c58aec7b8f39d83e961}{getTitulo}}())\{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stack_a1a9c8c5eac28e33b19e5a179543df064}\label{class_stack_a1a9c8c5eac28e33b19e5a179543df064}} 
+\index{Stack@{Stack}!getSize@{getSize}}
+\index{getSize@{getSize}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Stack\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o tamanho da pilha. 
+
+\begin{DoxyReturn}{Returns}
+O tamanho da pilha. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{return}\ elementos.size();}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stack_a0b35ff31811815078e460ae6db347e9c}\label{class_stack_a0b35ff31811815078e460ae6db347e9c}} 
+\index{Stack@{Stack}!imprimirElmentos@{imprimirElmentos}}
+\index{imprimirElmentos@{imprimirElmentos}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{imprimirElmentos()}{imprimirElmentos()}}
+{\footnotesize\ttfamily void Stack\+::imprimir\+Elmentos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime os elementos da pilha. 
+
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i<elementos.size();i++)\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ cout\ <<\ elementos[i].getTitulo()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \};}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stack_a801bf467a9efb7003321ee076b0a8bde}\label{class_stack_a801bf467a9efb7003321ee076b0a8bde}} 
+\index{Stack@{Stack}!isEmpity@{isEmpity}}
+\index{isEmpity@{isEmpity}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{isEmpity()}{isEmpity()}}
+{\footnotesize\ttfamily bool Stack\+::is\+Empity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se a pilha está vazia. 
+
+\begin{DoxyReturn}{Returns}
+true se a pilha estiver vazia, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{if}(elementos.size()\ ==\ 0)\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00010\ \ \ \ \ \}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stack_a9ace01ff7a826516656db5051b3c14b9}\label{class_stack_a9ace01ff7a826516656db5051b3c14b9}} 
+\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily bool Stack\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove o elemento do topo da pilha. 
+
+\begin{DoxyReturn}{Returns}
+true se o elemento foi removido com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{class_stack_a801bf467a9efb7003321ee076b0a8bde}{isEmpity}}())\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ elementos.pop\_back();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00042\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}A\ pilha\ esta\ vazia!"{}}\ <<\ endl;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stack_a0b8f9d25a4157a831775e1867fb80943}\label{class_stack_a0b8f9d25a4157a831775e1867fb80943}} 
+\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool Stack\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_musica}{Musica}}}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Insere um elemento no topo da pilha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elemento} & O elemento a ser inserido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o elemento foi inserido com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{class_stack_ab269ac69b659812298c7712760515b91}{find}}(elemento))\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ elementos.push\_back(elemento);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00033\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Elemento\ ja\ está\ na\ pilha!"{}}\ <<\ endl;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stack_a4451d896c795305c0282a8ed5dc1f3cb}\label{class_stack_a4451d896c795305c0282a8ed5dc1f3cb}} 
+\index{Stack@{Stack}!top@{top}}
+\index{top@{top}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily string Stack\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o elemento no topo da pilha. 
+
+\begin{DoxyReturn}{Returns}
+O elemento no topo da pilha. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_stack_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_stack_8cpp_source}{Stack.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{class_stack_a801bf467a9efb7003321ee076b0a8bde}{isEmpity}}())\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ elementos.back().getTitulo();}
+\DoxyCodeLine{00016\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}A\ pilha\ esta\ vazia!"{}}\ <<\ endl;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Stack.\+h\item 
+src/Stack.\+cpp\end{DoxyCompactItemize}

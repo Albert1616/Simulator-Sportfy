@@ -1,0 +1,655 @@
+\hypertarget{class_perfil}{}\doxysection{Perfil Class Reference}
+\label{class_perfil}\index{Perfil@{Perfil}}
+
+
+Classe \mbox{\hyperlink{class_perfil}{Perfil}} que representa um perfil de usuário.  
+
+
+
+
+{\ttfamily \#include $<$Perfil.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_perfil_a7d33c31b4d676edb7d5e5ff2905ce0c0}{Perfil}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \mbox{\hyperlink{class_perfil}{Perfil}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_perfil_a7464151b98e04ea34d45cb573e969ffd}{Perfil}} (string n, string e)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{class_perfil}{Perfil}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_perfil_a23978d891d08e7e8b4547849429eacec}{$\sim$\+Perfil}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{class_perfil}{Perfil}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_perfil_af97ff4a165fff8463ec7a9cb222124b0}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do perfil. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_perfil_a85c7a27cd4c24e21f697feb22b2b770e}{get\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o email do perfil. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_perfil_a4f3e3b0deabd7507db881ea60fe7c2be}{num\+Musicas}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o número de músicas favoritas do perfil. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_perfil_a33301f303940347537279da8024c307c}{num\+Artistas}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o número de artistas favoritos do perfil. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perfil_a0f269368af3384e1eab3f682e93b967f}{adicionar\+Musica}} (\mbox{\hyperlink{class_musica}{Musica}} m)
+\begin{DoxyCompactList}\small\item\em Adiciona uma música às músicas favoritas do perfil. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perfil_acc608bd714251008e3a546008c3a7d9c}{remover\+Musica}} (\mbox{\hyperlink{class_musica}{Musica}} m)
+\begin{DoxyCompactList}\small\item\em Remove uma música das músicas favoritas do perfil. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perfil_a44f638a0ee4a566e926dbb59d1f99c67}{adicionar\+Artista}} (\mbox{\hyperlink{class_artista}{Artista}} a)
+\begin{DoxyCompactList}\small\item\em Adiciona um artista aos artistas favoritos do perfil. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perfil_ab44e17fea0c6f87642fdd39d9ed6efdf}{remover\+Artista}} (\mbox{\hyperlink{class_artista}{Artista}} a)
+\begin{DoxyCompactList}\small\item\em Remove um artista dos artistas favoritos do perfil. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perfil_a4e0a9cc43e3c7ad173ddbb679d2fa3e6}{buscar\+Musica}} (\mbox{\hyperlink{class_musica}{Musica}} m)
+\begin{DoxyCompactList}\small\item\em Verifica se uma música está nas músicas favoritas do perfil. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perfil_ae1e2b95e914ac75fc8d9dc96843701f5}{buscar\+Artista}} (string nome)
+\begin{DoxyCompactList}\small\item\em Verifica se um artista está nos artistas favoritos do perfil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perfil_a2a71587e33d101486debb64131dc7c45}{ordena\+Musica}} ()
+\begin{DoxyCompactList}\small\item\em Ordena as músicas favoritas do perfil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perfil_a20a588ad9ddca4cd7b88329296098916}{ordena\+Artista}} ()
+\begin{DoxyCompactList}\small\item\em Ordena os artistas favoritos do perfil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perfil_a5575fdf90e8d9b8d8e45102297f34549}{salvar\+Playlist}} (ofstream \&arq)
+\begin{DoxyCompactList}\small\item\em Salva a playlist do perfil em um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perfil_a09fc0952812f0dd081915f959665785a}{recuperar\+Playlist}} (ifstream \&arq)
+\begin{DoxyCompactList}\small\item\em Recupera a playlist do perfil de um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perfil_a372a2acf59ebba902b01f4f961eaea83}{imprimir\+Musicas}} ()
+\begin{DoxyCompactList}\small\item\em Imprime as músicas favoritas do perfil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perfil_a3b2c6615c643ee628bdcd50cd9c2aa60}{imprimir\+Artistas}} ()
+\begin{DoxyCompactList}\small\item\em Imprime os artistas favoritos do perfil. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_musica}{Musica}} $>$ \mbox{\hyperlink{class_perfil_a44b686b51535885d398d173b7d89a0a0}{get\+Musicas}} ()
+\begin{DoxyCompactList}\small\item\em Obtém as músicas favoritas do perfil. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_artista}{Artista}} $>$ \mbox{\hyperlink{class_perfil_a09521035b657c582389273fe72cac61b}{get\+Artistas}} ()
+\begin{DoxyCompactList}\small\item\em Obtém os artistas favoritos do perfil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_perfil}{Perfil}} que representa um perfil de usuário. 
+
+Definition at line \mbox{\hyperlink{_perfil_8h_source_l00012}{12}} of file \mbox{\hyperlink{_perfil_8h_source}{Perfil.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_perfil_a7d33c31b4d676edb7d5e5ff2905ce0c0}\label{class_perfil_a7d33c31b4d676edb7d5e5ff2905ce0c0}} 
+\index{Perfil@{Perfil}!Perfil@{Perfil}}
+\index{Perfil@{Perfil}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{Perfil()}{Perfil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Perfil\+::\+Perfil (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \mbox{\hyperlink{class_perfil}{Perfil}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>nome\ =\ \textcolor{stringliteral}{"{}Não\ informado!"{}};}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>email\ =\ \textcolor{stringliteral}{"{}Não\ informado!"{}};}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a7464151b98e04ea34d45cb573e969ffd}\label{class_perfil_a7464151b98e04ea34d45cb573e969ffd}} 
+\index{Perfil@{Perfil}!Perfil@{Perfil}}
+\index{Perfil@{Perfil}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{Perfil()}{Perfil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Perfil\+::\+Perfil (\begin{DoxyParamCaption}\item[{string}]{n,  }\item[{string}]{e }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{class_perfil}{Perfil}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & O nome do perfil. \\
+\hline
+{\em e} & O email do perfil. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>nome\ =\ n;}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>email\ =\ e;}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a23978d891d08e7e8b4547849429eacec}\label{class_perfil_a23978d891d08e7e8b4547849429eacec}} 
+\index{Perfil@{Perfil}!````~Perfil@{$\sim$Perfil}}
+\index{````~Perfil@{$\sim$Perfil}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{$\sim$Perfil()}{~Perfil()}}
+{\footnotesize\ttfamily Perfil\+::$\sim$\+Perfil (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \mbox{\hyperlink{class_perfil}{Perfil}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_perfil_a44f638a0ee4a566e926dbb59d1f99c67}\label{class_perfil_a44f638a0ee4a566e926dbb59d1f99c67}} 
+\index{Perfil@{Perfil}!adicionarArtista@{adicionarArtista}}
+\index{adicionarArtista@{adicionarArtista}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{adicionarArtista()}{adicionarArtista()}}
+{\footnotesize\ttfamily bool Perfil\+::adicionar\+Artista (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_artista}{Artista}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Adiciona um artista aos artistas favoritos do perfil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & O artista a ser adicionado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o artista foi adicionado com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>artistasFavoritos.\mbox{\hyperlink{class_set_aa3ff0cd368b74531b34789dc7112c4be}{inserirElemento}}(m);}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a0f269368af3384e1eab3f682e93b967f}\label{class_perfil_a0f269368af3384e1eab3f682e93b967f}} 
+\index{Perfil@{Perfil}!adicionarMusica@{adicionarMusica}}
+\index{adicionarMusica@{adicionarMusica}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{adicionarMusica()}{adicionarMusica()}}
+{\footnotesize\ttfamily bool Perfil\+::adicionar\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_musica}{Musica}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma música às músicas favoritas do perfil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A música a ser adicionada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a música foi adicionada com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>musicasFavoritas.\mbox{\hyperlink{class_set_aa3ff0cd368b74531b34789dc7112c4be}{inserirElemento}}(m);}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_ae1e2b95e914ac75fc8d9dc96843701f5}\label{class_perfil_ae1e2b95e914ac75fc8d9dc96843701f5}} 
+\index{Perfil@{Perfil}!buscarArtista@{buscarArtista}}
+\index{buscarArtista@{buscarArtista}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{buscarArtista()}{buscarArtista()}}
+{\footnotesize\ttfamily bool Perfil\+::buscar\+Artista (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Verifica se um artista está nos artistas favoritos do perfil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & O nome do artista a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o artista está nos artistas favoritos do perfil, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_artista}{Artista}}\ a(nome);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{return}\ artistasFavoritos.\mbox{\hyperlink{class_set_a9d4b825e8e5cdeff2e68a882ef963e8d}{buscarElemento}}(a,\ 2);}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a4e0a9cc43e3c7ad173ddbb679d2fa3e6}\label{class_perfil_a4e0a9cc43e3c7ad173ddbb679d2fa3e6}} 
+\index{Perfil@{Perfil}!buscarMusica@{buscarMusica}}
+\index{buscarMusica@{buscarMusica}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{buscarMusica()}{buscarMusica()}}
+{\footnotesize\ttfamily bool Perfil\+::buscar\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_musica}{Musica}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Verifica se uma música está nas músicas favoritas do perfil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A música a ser buscada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a música está nas músicas favoritas do perfil, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ this-\/>\mbox{\hyperlink{class_perfil_a2a71587e33d101486debb64131dc7c45}{ordenaMusica}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{return}\ musicasFavoritas.\mbox{\hyperlink{class_set_a9d4b825e8e5cdeff2e68a882ef963e8d}{buscarElemento}}(m,\ 1);}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a09521035b657c582389273fe72cac61b}\label{class_perfil_a09521035b657c582389273fe72cac61b}} 
+\index{Perfil@{Perfil}!getArtistas@{getArtistas}}
+\index{getArtistas@{getArtistas}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{getArtistas()}{getArtistas()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_artista}{Artista}} $>$ Perfil\+::get\+Artistas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém os artistas favoritos do perfil. 
+
+\begin{DoxyReturn}{Returns}
+Um vetor com os artistas favoritos do perfil. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{return}\ artistasFavoritos.\mbox{\hyperlink{class_set_a22e0a1ef8e0db282ccec7207db0eca11}{getElementos}}();}
+\DoxyCodeLine{00146\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a85c7a27cd4c24e21f697feb22b2b770e}\label{class_perfil_a85c7a27cd4c24e21f697feb22b2b770e}} 
+\index{Perfil@{Perfil}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily string Perfil\+::get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o email do perfil. 
+
+\begin{DoxyReturn}{Returns}
+O email do perfil. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>email;}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a44b686b51535885d398d173b7d89a0a0}\label{class_perfil_a44b686b51535885d398d173b7d89a0a0}} 
+\index{Perfil@{Perfil}!getMusicas@{getMusicas}}
+\index{getMusicas@{getMusicas}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{getMusicas()}{getMusicas()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_musica}{Musica}} $>$ Perfil\+::get\+Musicas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém as músicas favoritas do perfil. 
+
+\begin{DoxyReturn}{Returns}
+Um vetor com as músicas favoritas do perfil. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00141}{141}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{return}\ musicasFavoritas.\mbox{\hyperlink{class_set_a22e0a1ef8e0db282ccec7207db0eca11}{getElementos}}();}
+\DoxyCodeLine{00143\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_af97ff4a165fff8463ec7a9cb222124b0}\label{class_perfil_af97ff4a165fff8463ec7a9cb222124b0}} 
+\index{Perfil@{Perfil}!getNome@{getNome}}
+\index{getNome@{getNome}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily string Perfil\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome do perfil. 
+
+\begin{DoxyReturn}{Returns}
+O nome do perfil. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>nome;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a3b2c6615c643ee628bdcd50cd9c2aa60}\label{class_perfil_a3b2c6615c643ee628bdcd50cd9c2aa60}} 
+\index{Perfil@{Perfil}!imprimirArtistas@{imprimirArtistas}}
+\index{imprimirArtistas@{imprimirArtistas}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{imprimirArtistas()}{imprimirArtistas()}}
+{\footnotesize\ttfamily void Perfil\+::imprimir\+Artistas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime os artistas favoritos do perfil. 
+
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ this-\/>artistasFavoritos.\mbox{\hyperlink{class_set_ac7b4e61ce95ee8f4883b71de17a4d87e}{imprimirElementos}}();}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a372a2acf59ebba902b01f4f961eaea83}\label{class_perfil_a372a2acf59ebba902b01f4f961eaea83}} 
+\index{Perfil@{Perfil}!imprimirMusicas@{imprimirMusicas}}
+\index{imprimirMusicas@{imprimirMusicas}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{imprimirMusicas()}{imprimirMusicas()}}
+{\footnotesize\ttfamily void Perfil\+::imprimir\+Musicas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime as músicas favoritas do perfil. 
+
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ this-\/>musicasFavoritas.\mbox{\hyperlink{class_set_ac7b4e61ce95ee8f4883b71de17a4d87e}{imprimirElementos}}();}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a33301f303940347537279da8024c307c}\label{class_perfil_a33301f303940347537279da8024c307c}} 
+\index{Perfil@{Perfil}!numArtistas@{numArtistas}}
+\index{numArtistas@{numArtistas}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{numArtistas()}{numArtistas()}}
+{\footnotesize\ttfamily int Perfil\+::num\+Artistas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o número de artistas favoritos do perfil. 
+
+\begin{DoxyReturn}{Returns}
+O número de artistas favoritos do perfil. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{return}\ artistasFavoritos.\mbox{\hyperlink{class_set_a3d2e0df73e2455964840fe5c668f3d81}{getSize}}();}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a4f3e3b0deabd7507db881ea60fe7c2be}\label{class_perfil_a4f3e3b0deabd7507db881ea60fe7c2be}} 
+\index{Perfil@{Perfil}!numMusicas@{numMusicas}}
+\index{numMusicas@{numMusicas}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{numMusicas()}{numMusicas()}}
+{\footnotesize\ttfamily int Perfil\+::num\+Musicas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o número de músicas favoritas do perfil. 
+
+\begin{DoxyReturn}{Returns}
+O número de músicas favoritas do perfil. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{return}\ musicasFavoritas.\mbox{\hyperlink{class_set_a3d2e0df73e2455964840fe5c668f3d81}{getSize}}();}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a20a588ad9ddca4cd7b88329296098916}\label{class_perfil_a20a588ad9ddca4cd7b88329296098916}} 
+\index{Perfil@{Perfil}!ordenaArtista@{ordenaArtista}}
+\index{ordenaArtista@{ordenaArtista}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{ordenaArtista()}{ordenaArtista()}}
+{\footnotesize\ttfamily void Perfil\+::ordena\+Artista (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ordena os artistas favoritos do perfil. 
+
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ vector<Artista>\ a\ =\ artistasFavoritos.\mbox{\hyperlink{class_set_a22e0a1ef8e0db282ccec7207db0eca11}{getElementos}}();}
+\DoxyCodeLine{00056\ \ \ \ \ insertionSort(a);}
+\DoxyCodeLine{00057\ \ \ \ \ artistasFavoritos.\mbox{\hyperlink{class_set_a8a9d87f7543b6be1e240ad4eee747546}{setElementos}}(a);}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a2a71587e33d101486debb64131dc7c45}\label{class_perfil_a2a71587e33d101486debb64131dc7c45}} 
+\index{Perfil@{Perfil}!ordenaMusica@{ordenaMusica}}
+\index{ordenaMusica@{ordenaMusica}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{ordenaMusica()}{ordenaMusica()}}
+{\footnotesize\ttfamily void Perfil\+::ordena\+Musica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ordena as músicas favoritas do perfil. 
+
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ vector<Musica>\ m\ =\ musicasFavoritas.\mbox{\hyperlink{class_set_a22e0a1ef8e0db282ccec7207db0eca11}{getElementos}}();}
+\DoxyCodeLine{00062\ \ \ \ \ bubleSort(m);}
+\DoxyCodeLine{00063\ \ \ \ \ musicasFavoritas.\mbox{\hyperlink{class_set_a8a9d87f7543b6be1e240ad4eee747546}{setElementos}}(m);}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a09fc0952812f0dd081915f959665785a}\label{class_perfil_a09fc0952812f0dd081915f959665785a}} 
+\index{Perfil@{Perfil}!recuperarPlaylist@{recuperarPlaylist}}
+\index{recuperarPlaylist@{recuperarPlaylist}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{recuperarPlaylist()}{recuperarPlaylist()}}
+{\footnotesize\ttfamily void Perfil\+::recuperar\+Playlist (\begin{DoxyParamCaption}\item[{ifstream \&}]{arq }\end{DoxyParamCaption})}
+
+
+
+Recupera a playlist do perfil de um arquivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arq} & O arquivo de onde a playlist será recuperada. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ arq.open(\textcolor{stringliteral}{"{}../data/Musica\_salvas.txt"{}});}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}\ (arq.is\_open())}
+\DoxyCodeLine{00115\ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignorar\ a\ primeira\ linha\ de\ cabeçalho}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ std::getline(arq,\ line);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(arq,\ line))}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ iss(line);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ titulo,\ genero,\ artista;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ano,\ numReproducoes;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extrai\ as\ informações\ da\ linha\ separadas\ por\ tabulação}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::getline(iss,\ titulo,\ \textcolor{charliteral}{'\(\backslash\)t'})\ \&\&}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ iss\ >>\ ano\ >>\ genero\ >>\ numReproducoes\ >>\ artista)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_artista}{Artista}}\ artistaObj(artista);\ \textcolor{comment}{//\ Cria\ um\ objeto\ Artista\ com\ base\ na\ string}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ o\ objeto\ de\ música\ usando\ o\ construtor\ especificado}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_musica}{Musica}}\ musica(titulo,\ ano,\ genero,\ numReproducoes,\ artistaObj);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ musicasFavoritas.\mbox{\hyperlink{class_set_aa3ff0cd368b74531b34789dc7112c4be}{inserirElemento}}(musica);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00137\ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Arquivo\ não\ foi\ aberto"{}}\ <<\ endl;}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_ab44e17fea0c6f87642fdd39d9ed6efdf}\label{class_perfil_ab44e17fea0c6f87642fdd39d9ed6efdf}} 
+\index{Perfil@{Perfil}!removerArtista@{removerArtista}}
+\index{removerArtista@{removerArtista}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{removerArtista()}{removerArtista()}}
+{\footnotesize\ttfamily bool Perfil\+::remover\+Artista (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_artista}{Artista}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Remove um artista dos artistas favoritos do perfil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & O artista a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o artista foi removido com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>artistasFavoritos.\mbox{\hyperlink{class_set_a81a1e8ab161da891b4762a6d0b8db336}{removerElemento}}(m);}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_acc608bd714251008e3a546008c3a7d9c}\label{class_perfil_acc608bd714251008e3a546008c3a7d9c}} 
+\index{Perfil@{Perfil}!removerMusica@{removerMusica}}
+\index{removerMusica@{removerMusica}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{removerMusica()}{removerMusica()}}
+{\footnotesize\ttfamily bool Perfil\+::remover\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_musica}{Musica}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Remove uma música das músicas favoritas do perfil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A música a ser removida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a música foi removida com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>musicasFavoritas.\mbox{\hyperlink{class_set_a81a1e8ab161da891b4762a6d0b8db336}{removerElemento}}(m);}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_perfil_a5575fdf90e8d9b8d8e45102297f34549}\label{class_perfil_a5575fdf90e8d9b8d8e45102297f34549}} 
+\index{Perfil@{Perfil}!salvarPlaylist@{salvarPlaylist}}
+\index{salvarPlaylist@{salvarPlaylist}!Perfil@{Perfil}}
+\doxysubsubsection{\texorpdfstring{salvarPlaylist()}{salvarPlaylist()}}
+{\footnotesize\ttfamily void Perfil\+::salvar\+Playlist (\begin{DoxyParamCaption}\item[{ofstream \&}]{arq }\end{DoxyParamCaption})}
+
+
+
+Salva a playlist do perfil em um arquivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arq} & O arquivo onde a playlist será salva. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_perfil_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{_perfil_8cpp_source}{Perfil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ arq.open(\textcolor{stringliteral}{"{}../data/Musica\_salvas.txt"{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (arq.is\_open())}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ arq\ <<\ std::left}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ \textcolor{stringliteral}{"{}Titulo"{}}\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(8)\ <<\ \textcolor{stringliteral}{"{}Ano"{}}\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(10)\ <<\ \textcolor{stringliteral}{"{}Genero"{}}\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(28)\ <<\ \textcolor{stringliteral}{"{}Número\ de\ reproduções"{}}\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ \textcolor{stringliteral}{"{}Artista"{}}\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::endl;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ std::vector<Musica>\ m\ =\ musicasFavoritas.\mbox{\hyperlink{class_set_a22e0a1ef8e0db282ccec7207db0eca11}{getElementos}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ musicasFavoritas.\mbox{\hyperlink{class_set_a3d2e0df73e2455964840fe5c668f3d81}{getSize}}();\ i++)}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ arq\ <<\ std::left}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ m[i].getTitulo()\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(8)\ <<\ m[i].getAnoLancamento()\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(10)\ <<\ m[i].getGenero()\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(22)\ <<\ m[i].getnumeroReproducoes()\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(28)\ <<\ m[i].getArtista().getNome()\ <<\ \textcolor{charliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::endl;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ arq.close();}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Perfil.\+h\item 
+src/Perfil.\+cpp\end{DoxyCompactItemize}

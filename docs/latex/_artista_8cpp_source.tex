@@ -1,0 +1,45 @@
+\hypertarget{_artista_8cpp_source}{}\doxysection{Artista.\+cpp}
+\label{_artista_8cpp_source}\index{src/Artista.cpp@{src/Artista.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../include/Artista.h"{}}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}../include/Musica.h"{}}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00006}\mbox{\hyperlink{class_artista_a91b338083b7d1686efd6328de9165ecc}{00006}}\ \mbox{\hyperlink{class_artista_a91b338083b7d1686efd6328de9165ecc}{Artista::Artista}}()\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00007}00007\ \ \ \ \ this-\/>nome\ =\ \textcolor{stringliteral}{"{}Desconhecido"{}};}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00009}\mbox{\hyperlink{class_artista_a8b4eb1cdc9454e69a569e9e00bd5051e}{00009}}\ \mbox{\hyperlink{class_artista_a91b338083b7d1686efd6328de9165ecc}{Artista::Artista}}(\textcolor{keywordtype}{string}\ n)\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00010}00010\ \ \ \ \ this-\/>nome\ =\ n;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00011}00011\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00012}\mbox{\hyperlink{class_artista_a928322fdec85d2037675aa15945e0444}{00012}}\ \mbox{\hyperlink{class_artista_a928322fdec85d2037675aa15945e0444}{Artista::\string~Artista}}()\{\}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00013}\mbox{\hyperlink{class_artista_a84bbeb895ec767bcfc7b1d71ce8ef837}{00013}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_artista_a84bbeb895ec767bcfc7b1d71ce8ef837}{Artista::getNome}}()\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>nome;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00016}\mbox{\hyperlink{class_artista_aa2887ab9318f268793def44bafe58281}{00016}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_artista_aa2887ab9318f268793def44bafe58281}{Artista::adicionarMusica}}(\mbox{\hyperlink{class_musica}{Musica}}\ m)\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00017}00017\ \ \ \ \ this-\/>musicas.\mbox{\hyperlink{class_stack_a0b8f9d25a4157a831775e1867fb80943}{push}}(m);}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00019}\mbox{\hyperlink{class_artista_ade86a1ba4f34b37a69addbbaccea3891}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_artista_ade86a1ba4f34b37a69addbbaccea3891}{Artista::imprimiMusicas}}()\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00020}00020\ \ \ \ \ this-\/>musicas.\mbox{\hyperlink{class_stack_a0b35ff31811815078e460ae6db347e9c}{imprimirElmentos}}();}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00022}\mbox{\hyperlink{class_artista_aed79c7d1f04d3e38704cc807248b719e}{00022}}\ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_artista}{Artista}}\&\ a1,\textcolor{keyword}{const}\ \mbox{\hyperlink{class_artista}{Artista}}\&\ a2)\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00023}00023\ \ \ \ \ std::string\ nome1\ =\ a1.nome;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00024}00024\ \ \ \ \ std::string\ nome2\ =\ a2.nome;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00025}00025\ \ \ \ \ std::transform(nome1.begin(),\ nome1.end(),\ nome1.begin(),\ ::tolower);}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00026}00026\ \ \ \ \ std::transform(nome2.begin(),\ nome2.end(),\ nome2.begin(),\ ::tolower);}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ nome1\ ==\ nome2;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00029}\mbox{\hyperlink{class_artista_aca4103a6c756381a177d2146d154572f}{00029}}\ std::ostream\&\ operator<<(std::ostream\&\ obj,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_artista}{Artista}}\&\ m)\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00030}00030\ \ \ \ \ obj\ <<\ m.nome;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ obj;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00033}\mbox{\hyperlink{class_artista_ab5868dfc1ef80292f1b56dd5c19057ee}{00033}}\ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_artista}{Artista}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_artista}{Artista}}\&\ m2)\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ m1.nome\ <\ m2.nome;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00036}\mbox{\hyperlink{class_artista_a170231613f0d09fe8dfe087209396733}{00036}}\ \textcolor{keywordtype}{bool}\ operator>(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_artista}{Artista}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_artista}{Artista}}\&\ m2)\{}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ m1.nome\ >\ m2.nome;}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{_artista_8cpp_source_l00039}00039\ }
+
+\end{DoxyCode}

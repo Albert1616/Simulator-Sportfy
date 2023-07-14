@@ -1,0 +1,52 @@
+\hypertarget{_musica_8h_source}{}\doxysection{Musica.\+h}
+\label{_musica_8h_source}\index{include/Musica.h@{include/Musica.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MUSICA\_H}}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MUSICA\_H}}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}Artista.h"{}}}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00007}00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00009}00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_artista}{Artista}};\ \textcolor{comment}{//\ Declaração\ antecipada\ da\ classe\ Artista}}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00014}\mbox{\hyperlink{class_musica}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_musica}{Musica}}\ \{}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00015}00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{string}\ titulo;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_artista}{Artista}}\ artista;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{int}\ anoLancamento;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{string}\ genero;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{int}\ numeroReproducoes;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00026}\mbox{\hyperlink{class_musica_a435c4de75bd638108bf9caae58000e18}{00026}}\ \ \ \ \ \mbox{\hyperlink{class_musica_a435c4de75bd638108bf9caae58000e18}{Musica}}();}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_musica_a435c4de75bd638108bf9caae58000e18}{Musica}}(\textcolor{keywordtype}{string}\ t,\ \textcolor{keywordtype}{int}\ ano,\ \textcolor{keywordtype}{string}\ g,\ \textcolor{keywordtype}{int}\ numprod,\ \mbox{\hyperlink{class_artista}{Artista}}\ a\ =\ \mbox{\hyperlink{class_artista}{Artista}}(\textcolor{stringliteral}{"{}Desconhecido"{}}));}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{class_musica_aebcf7c6bd83ea83d172be34e2fd550f2}{\string~Musica}}();}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_musica_a6b86215d63e65c58aec7b8f39d83e961}{getTitulo}}();}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_musica_acba7b47c324368e93dbfb30e3c1ca1d6}{setArtista}}(\mbox{\hyperlink{class_artista}{Artista}}\&\ a);}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{class_artista}{Artista}}\ \mbox{\hyperlink{class_musica_aea0339b3c2b46ee71a18a40d2ec93d1c}{getArtista}}();}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_musica_acb76417bc7ec0aa32858f37c9e47af16}{getAnoLancamento}}();}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_musica_ae4ffd271fccccc4e8dea1c0a82acdf73}{getnumeroReproducoes}}();}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_musica_ab11b5c8d2f97a95225b4ee168bce3a89}{getGenero}}();}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_musica_a288aa8a6eb0418ba5e07c5e55007e0d9}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_musica}{Musica}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_musica}{Musica}}\&\ m2);}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00102}00102\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{class_musica_aa6683dac7bf2e6b7ea32f50196d9cd01}{operator<<}}(std::ostream\&\ obj,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_musica}{Musica}}\&\ m);}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00111}00111\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_musica_a82d2f5a6f85c879316467480ae46bf5c}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_musica}{Musica}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_musica}{Musica}}\&\ m2);}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00120}00120\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_musica_aa0e0773768757456498137d92bb2b64b}{operator>}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_musica}{Musica}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_musica}{Musica}}\&\ m2);}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00121}00121\ \};}
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_musica_8h_source_l00123}00123\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

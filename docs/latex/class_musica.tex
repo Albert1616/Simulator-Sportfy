@@ -1,0 +1,410 @@
+\hypertarget{class_musica}{}\doxysection{Musica Class Reference}
+\label{class_musica}\index{Musica@{Musica}}
+
+
+Classe que representa uma música.  
+
+
+
+
+{\ttfamily \#include $<$Musica.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_musica_a435c4de75bd638108bf9caae58000e18}\label{class_musica_a435c4de75bd638108bf9caae58000e18}} 
+{\bfseries Musica} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \mbox{\hyperlink{class_musica}{Musica}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_musica_a941d78b3ff9d446751cfed3b40b40501}{Musica}} (string t, int ano, string g, int numprod, \mbox{\hyperlink{class_artista}{Artista}} a=\mbox{\hyperlink{class_artista}{Artista}}(\char`\"{}Desconhecido\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{class_musica}{Musica}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_musica_aebcf7c6bd83ea83d172be34e2fd550f2}{$\sim$\+Musica}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{class_musica}{Musica}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_musica_a6b86215d63e65c58aec7b8f39d83e961}{get\+Titulo}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o título da música. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_musica_acba7b47c324368e93dbfb30e3c1ca1d6}{set\+Artista}} (\mbox{\hyperlink{class_artista}{Artista}} \&a)
+\begin{DoxyCompactList}\small\item\em Define o artista da música. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_artista}{Artista}} \mbox{\hyperlink{class_musica_aea0339b3c2b46ee71a18a40d2ec93d1c}{get\+Artista}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o artista da música. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_musica_acb76417bc7ec0aa32858f37c9e47af16}{get\+Ano\+Lancamento}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ano de lançamento da música. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_musica_ae4ffd271fccccc4e8dea1c0a82acdf73}{getnumero\+Reproducoes}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o número de reproduções da música. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_musica_ab11b5c8d2f97a95225b4ee168bce3a89}{get\+Genero}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o gênero da música. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_musica_a288aa8a6eb0418ba5e07c5e55007e0d9}{operator==}} (const \mbox{\hyperlink{class_musica}{Musica}} \&m1, const \mbox{\hyperlink{class_musica}{Musica}} \&m2)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de igualdade (==) para comparar duas músicas. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{class_musica_aa6683dac7bf2e6b7ea32f50196d9cd01}{operator$<$$<$}} (std\+::ostream \&obj, const \mbox{\hyperlink{class_musica}{Musica}} \&m)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de impressão (\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}) para exibir uma música. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_musica_a82d2f5a6f85c879316467480ae46bf5c}{operator$<$}} (const \mbox{\hyperlink{class_musica}{Musica}} \&m1, const \mbox{\hyperlink{class_musica}{Musica}} \&m2)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de menor que (\texorpdfstring{$<$}{<}) para comparar duas músicas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_musica_aa0e0773768757456498137d92bb2b64b}{operator$>$}} (const \mbox{\hyperlink{class_musica}{Musica}} \&m1, const \mbox{\hyperlink{class_musica}{Musica}} \&m2)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de maior que (\texorpdfstring{$>$}{>}) para comparar duas músicas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa uma música. 
+
+Definition at line \mbox{\hyperlink{_musica_8h_source_l00014}{14}} of file \mbox{\hyperlink{_musica_8h_source}{Musica.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_musica_a941d78b3ff9d446751cfed3b40b40501}\label{class_musica_a941d78b3ff9d446751cfed3b40b40501}} 
+\index{Musica@{Musica}!Musica@{Musica}}
+\index{Musica@{Musica}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{Musica()}{Musica()}}
+{\footnotesize\ttfamily Musica\+::\+Musica (\begin{DoxyParamCaption}\item[{string}]{t,  }\item[{int}]{ano,  }\item[{string}]{g,  }\item[{int}]{numprod,  }\item[{\mbox{\hyperlink{class_artista}{Artista}}}]{a = {\ttfamily \mbox{\hyperlink{class_artista}{Artista}}(\char`\"{}Desconhecido\char`\"{})} }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{class_musica}{Musica}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Título da música. \\
+\hline
+{\em ano} & Ano de lançamento da música. \\
+\hline
+{\em g} & Gênero da música. \\
+\hline
+{\em numprod} & Número de reproduções da música. \\
+\hline
+{\em a} & \mbox{\hyperlink{class_artista}{Artista}} da música (opcional, padrão é \char`\"{}\+Desconhecido\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>titulo\ =\ t;}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>anoLancamento\ =\ ano;}
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>genero\ =\ g;}
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>numeroReproducoes\ =\ numprod;}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>artista\ =\ a;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_aebcf7c6bd83ea83d172be34e2fd550f2}\label{class_musica_aebcf7c6bd83ea83d172be34e2fd550f2}} 
+\index{Musica@{Musica}!````~Musica@{$\sim$Musica}}
+\index{````~Musica@{$\sim$Musica}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{$\sim$Musica()}{~Musica()}}
+{\footnotesize\ttfamily Musica\+::$\sim$\+Musica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \mbox{\hyperlink{class_musica}{Musica}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_musica_acb76417bc7ec0aa32858f37c9e47af16}\label{class_musica_acb76417bc7ec0aa32858f37c9e47af16}} 
+\index{Musica@{Musica}!getAnoLancamento@{getAnoLancamento}}
+\index{getAnoLancamento@{getAnoLancamento}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{getAnoLancamento()}{getAnoLancamento()}}
+{\footnotesize\ttfamily int Musica\+::get\+Ano\+Lancamento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ano de lançamento da música. 
+
+\begin{DoxyReturn}{Returns}
+O ano de lançamento da música. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>anoLancamento;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_aea0339b3c2b46ee71a18a40d2ec93d1c}\label{class_musica_aea0339b3c2b46ee71a18a40d2ec93d1c}} 
+\index{Musica@{Musica}!getArtista@{getArtista}}
+\index{getArtista@{getArtista}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{getArtista()}{getArtista()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_artista}{Artista}} Musica\+::get\+Artista (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o artista da música. 
+
+\begin{DoxyReturn}{Returns}
+O artista da música. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>artista;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_ab11b5c8d2f97a95225b4ee168bce3a89}\label{class_musica_ab11b5c8d2f97a95225b4ee168bce3a89}} 
+\index{Musica@{Musica}!getGenero@{getGenero}}
+\index{getGenero@{getGenero}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{getGenero()}{getGenero()}}
+{\footnotesize\ttfamily string Musica\+::get\+Genero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o gênero da música. 
+
+\begin{DoxyReturn}{Returns}
+O gênero da música. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>genero;}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_ae4ffd271fccccc4e8dea1c0a82acdf73}\label{class_musica_ae4ffd271fccccc4e8dea1c0a82acdf73}} 
+\index{Musica@{Musica}!getnumeroReproducoes@{getnumeroReproducoes}}
+\index{getnumeroReproducoes@{getnumeroReproducoes}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{getnumeroReproducoes()}{getnumeroReproducoes()}}
+{\footnotesize\ttfamily int Musica\+::getnumero\+Reproducoes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o número de reproduções da música. 
+
+\begin{DoxyReturn}{Returns}
+O número de reproduções da música. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>numeroReproducoes;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_a6b86215d63e65c58aec7b8f39d83e961}\label{class_musica_a6b86215d63e65c58aec7b8f39d83e961}} 
+\index{Musica@{Musica}!getTitulo@{getTitulo}}
+\index{getTitulo@{getTitulo}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{getTitulo()}{getTitulo()}}
+{\footnotesize\ttfamily string Musica\+::get\+Titulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o título da música. 
+
+\begin{DoxyReturn}{Returns}
+O título da música. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>titulo;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_acba7b47c324368e93dbfb30e3c1ca1d6}\label{class_musica_acba7b47c324368e93dbfb30e3c1ca1d6}} 
+\index{Musica@{Musica}!setArtista@{setArtista}}
+\index{setArtista@{setArtista}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{setArtista()}{setArtista()}}
+{\footnotesize\ttfamily void Musica\+::set\+Artista (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_artista}{Artista}} \&}]{a }\end{DoxyParamCaption})}
+
+
+
+Define o artista da música. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & O artista a ser definido. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>artista\ =\ a;}
+\DoxyCodeLine{00018\ \ \ \ \ a.\mbox{\hyperlink{class_artista_aa2887ab9318f268793def44bafe58281}{adicionarMusica}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_musica_a82d2f5a6f85c879316467480ae46bf5c}\label{class_musica_a82d2f5a6f85c879316467480ae46bf5c}} 
+\index{Musica@{Musica}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_musica}{Musica}} \&}]{m1,  }\item[{const \mbox{\hyperlink{class_musica}{Musica}} \&}]{m2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de menor que (\texorpdfstring{$<$}{<}) para comparar duas músicas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & A primeira música a ser comparada. \\
+\hline
+{\em m2} & A segunda música a ser comparada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a primeira música for menor que a segunda, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{return}\ m1.numeroReproducoes\ <\ m2.numeroReproducoes;}
+\DoxyCodeLine{00067\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_aa6683dac7bf2e6b7ea32f50196d9cd01}\label{class_musica_aa6683dac7bf2e6b7ea32f50196d9cd01}} 
+\index{Musica@{Musica}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{obj,  }\item[{const \mbox{\hyperlink{class_musica}{Musica}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de impressão (\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}) para exibir uma música. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & O objeto de saída do fluxo. \\
+\hline
+{\em m} & A música a ser exibida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A referência para o objeto de saída do fluxo. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ obj\ <<\ m.titulo;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ obj;}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_a288aa8a6eb0418ba5e07c5e55007e0d9}\label{class_musica_a288aa8a6eb0418ba5e07c5e55007e0d9}} 
+\index{Musica@{Musica}!operator==@{operator==}}
+\index{operator==@{operator==}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_musica}{Musica}} \&}]{m1,  }\item[{const \mbox{\hyperlink{class_musica}{Musica}} \&}]{m2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de igualdade (==) para comparar duas músicas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & A primeira música a ser comparada. \\
+\hline
+{\em m2} & A segunda música a ser comparada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se as músicas forem iguais, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{string}\ musica1\ =\ m1.titulo;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{string}\ musica2\ =\ m2.titulo;}
+\DoxyCodeLine{00044\ \ \ \ \ std::transform(musica1.begin(),\ musica1.end(),\ musica1.begin(),\ ::tolower);}
+\DoxyCodeLine{00045\ \ \ \ \ std::transform(musica2.begin(),\ musica2.end(),\ musica2.begin(),\ ::tolower);}
+\DoxyCodeLine{00046\ \ \ \ \ musica1.erase(std::remove\_if(musica1.begin(),\ musica1.end(),\ ::isspace),\ musica1.end());}
+\DoxyCodeLine{00047\ \ \ \ \ musica2.erase(std::remove\_if(musica2.begin(),\ musica2.end(),\ ::isspace),\ musica2.end());}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{string}\ genero1\ =\ m1.genero;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{string}\ genero2\ =\ m2.genero;}
+\DoxyCodeLine{00051\ \ \ \ \ std::transform(genero1.begin(),\ genero1.end(),\ genero1.begin(),\ ::tolower);}
+\DoxyCodeLine{00052\ \ \ \ \ std::transform(genero2.begin(),\ genero2.end(),\ genero2.begin(),\ ::tolower);}
+\DoxyCodeLine{00053\ \ \ \ \ genero1.erase(std::remove\_if(genero1.begin(),\ genero1.end(),\ ::isspace),\ genero1.end());}
+\DoxyCodeLine{00054\ \ \ \ \ genero2.erase(std::remove\_if(genero2.begin(),\ genero2.end(),\ ::isspace),\ genero2.end());}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ ((musica1\ ==\ musica2)\&\&(m1.anoLancamento\ ==\ m2.anoLancamento)\&\&}
+\DoxyCodeLine{00056\ \ \ \ \ (m1.genero\ ==\ m2.genero)\ \&\&\ (m1.numeroReproducoes\ ==\ m2.numeroReproducoes)}
+\DoxyCodeLine{00057\ \ \ \ \ \&\&(m1.artista\ ==\ m2.artista));}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_musica_aa0e0773768757456498137d92bb2b64b}\label{class_musica_aa0e0773768757456498137d92bb2b64b}} 
+\index{Musica@{Musica}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Musica@{Musica}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_musica}{Musica}} \&}]{m1,  }\item[{const \mbox{\hyperlink{class_musica}{Musica}} \&}]{m2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de maior que (\texorpdfstring{$>$}{>}) para comparar duas músicas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & A primeira música a ser comparada. \\
+\hline
+{\em m2} & A segunda música a ser comparada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a primeira música for maior que a segunda, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_musica_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{_musica_8cpp_source}{Musica.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{return}\ m1.numeroReproducoes\ >\ m2.numeroReproducoes;}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Musica.\+h\item 
+src/Musica.\+cpp\end{DoxyCompactItemize}

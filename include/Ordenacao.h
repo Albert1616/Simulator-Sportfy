@@ -3,9 +3,16 @@
 
 #include <vector>
 
+/**
+ * @brief Realiza a ordenação por inserção em um vetor.
+ * 
+ * @tparam T Tipo dos elementos do vetor.
+ * @param lista O vetor a ser ordenado.
+ */
+
 template <typename T>
 void insertionSort(std::vector<T>& lista){
-    for(int i = 1; i<lista.size();i++){
+    for(unsigned int i = 1; i<lista.size();i++){
         T key = lista[i];
         int j = i-1;
         while(j >= 0 && lista[j] > key){
@@ -16,10 +23,17 @@ void insertionSort(std::vector<T>& lista){
     }
 }
 
+/**
+ * @brief Realiza a ordenação por bubble sort em um vetor.
+ * 
+ * @tparam T Tipo dos elementos do vetor.
+ * @param lista O vetor a ser ordenado.
+ */
+
 template <typename T>
 void bubleSort(std::vector<T>& lista){
-    for(int i = 0; i<lista.size()-1;i++){
-        for(int j = 0;j<lista.size()-i-1;j++){
+    for(unsigned int i = 0; i<lista.size()-1;i++){
+        for(unsigned int j = 0;j<lista.size()-i-1;j++){
             if(lista[j] < lista[j+1]){
                 T swap = lista[j];
                 lista[j] = lista[j+1];

@@ -1,0 +1,63 @@
+\hypertarget{_perfil_8h_source}{}\doxysection{Perfil.\+h}
+\label{_perfil_8h_source}\index{include/Perfil.h@{include/Perfil.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}Artista.h"{}}}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}Musica.h"{}}}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}Stack.h"{}}}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}Set.h"{}}}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00007}00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00012}\mbox{\hyperlink{class_perfil}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_perfil}{Perfil}}\{}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nome;\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ email;\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00016}00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_set}{Set<Artista>}}\ artistasFavoritos;\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_set}{Set<Musica>}}\ musicasFavoritas;\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_perfil_a7d33c31b4d676edb7d5e5ff2905ce0c0}{Perfil}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_perfil_a7d33c31b4d676edb7d5e5ff2905ce0c0}{Perfil}}(\textcolor{keywordtype}{string}\ n,\ \textcolor{keywordtype}{string}\ e);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_perfil_a23978d891d08e7e8b4547849429eacec}{\string~Perfil}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_perfil_af97ff4a165fff8463ec7a9cb222124b0}{getNome}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_perfil_a85c7a27cd4c24e21f697feb22b2b770e}{getEmail}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_perfil_a4f3e3b0deabd7507db881ea60fe7c2be}{numMusicas}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_perfil_a33301f303940347537279da8024c307c}{numArtistas}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_perfil_a0f269368af3384e1eab3f682e93b967f}{adicionarMusica}}(\mbox{\hyperlink{class_musica}{Musica}}\ m);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_perfil_acc608bd714251008e3a546008c3a7d9c}{removerMusica}}(\mbox{\hyperlink{class_musica}{Musica}}\ m);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_perfil_a44f638a0ee4a566e926dbb59d1f99c67}{adicionarArtista}}(\mbox{\hyperlink{class_artista}{Artista}}\ a);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_perfil_ab44e17fea0c6f87642fdd39d9ed6efdf}{removerArtista}}(\mbox{\hyperlink{class_artista}{Artista}}\ a);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_perfil_a4e0a9cc43e3c7ad173ddbb679d2fa3e6}{buscarMusica}}(\mbox{\hyperlink{class_musica}{Musica}}\ m);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_perfil_ae1e2b95e914ac75fc8d9dc96843701f5}{buscarArtista}}(\textcolor{keywordtype}{string}\ nome);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perfil_a2a71587e33d101486debb64131dc7c45}{ordenaMusica}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perfil_a20a588ad9ddca4cd7b88329296098916}{ordenaArtista}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perfil_a5575fdf90e8d9b8d8e45102297f34549}{salvarPlaylist}}(ofstream\ \&arq);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perfil_a09fc0952812f0dd081915f959665785a}{recuperarPlaylist}}(ifstream\ \&arq);}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perfil_a372a2acf59ebba902b01f4f961eaea83}{imprimirMusicas}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perfil_a3b2c6615c643ee628bdcd50cd9c2aa60}{imprimirArtistas}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00138}00138\ \ \ \ \ \ \ \ \ vector<Musica>\ \mbox{\hyperlink{class_perfil_a44b686b51535885d398d173b7d89a0a0}{getMusicas}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00144}00144\ \ \ \ \ \ \ \ \ vector<Artista>\ \mbox{\hyperlink{class_perfil_a09521035b657c582389273fe72cac61b}{getArtistas}}();}
+\DoxyCodeLine{\Hypertarget{_perfil_8h_source_l00145}00145\ \};}
+
+\end{DoxyCode}

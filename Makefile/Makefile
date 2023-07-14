@@ -1,7 +1,7 @@
-PROG = programa
+PROG = ../bin/programa
 CC = g++
 CPPFLAGS = -O0 -g -W -Wall -pedantic
-OBJS = ../build/main.o ../build/Perfil.o ../build/Musica.o ../build/Artista.o ../build/Stack.o ../build/menu.o
+OBJS = ../build/main.o ../build/Perfil.o ../build/Musica.o ../build/Artista.o ../build/Stack.o ../build/menu.o ../build/recuperacao.o
 
 $(PROG): $(OBJS)
 	$(CC) $(OBJS) -o $(PROG)
@@ -23,6 +23,9 @@ $(PROG): $(OBJS)
 
 ../build/menu.o: ../src/menu.cpp ../include/Menu.h
 	$(CC) $(CPPFLAGS) -c ../src/menu.cpp -o ../build/menu.o
+
+../build/recuperacao.o: ../src/recuperacao.cpp ../include/recuperacao.h
+	$(CC) $(CPPFLAGS) -c ../src/recuperacao.cpp -o ../build/recuperacao.o
 
 .PHONY: run
 run: $(PROG)

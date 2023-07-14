@@ -1,0 +1,51 @@
+Nome
+Queen
+Michael Jackson
+Eagles
+John Lennon
+Led Zeppelin
+The Beatles
+Bob Dylan
+Nirvana
+The Cure
+Guns N' Roses
+Billy Joel
+Bon Jovi
+The Rolling Stones
+Pink Floyd
+OutKast
+Oasis
+Jimi Hendrix
+Journey
+The Killers
+Madonna
+Hozier
+Lynyrd Skynyrd
+Whitney Houston
+Aerosmith
+Elvis Presley
+David Bowie
+Prince
+AC/DC
+U2
+Radiohead
+Coldplay
+Bruce Springsteen
+The Police
+The Who
+Metallica
+Beyoncé
+Red Hot Chili Peppers
+Stevie Wonder
+Fleetwood Mac
+Elton John
+Adele
+Kanye West
+Justin Timberlake
+Taylor Swift
+Ed Sheeran
+Maroon 5
+Rihanna
+Drake
+Sia
+Eminem

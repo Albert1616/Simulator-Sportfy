@@ -1,0 +1,41 @@
+\hypertarget{_busca_8h_source}{}\doxysection{Busca.\+h}
+\label{_busca_8h_source}\index{include/Busca.h@{include/Busca.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ BUSCA\_H}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ BUSCA\_H}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}Musica.h"{}}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}Artista.h"{}}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00018}00018\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00019}00019\ \textcolor{keywordtype}{bool}\ Busca\_binaria(\textcolor{keywordtype}{int}\ inicio,\ \textcolor{keywordtype}{int}\ fim,\ T\ elemento,\ std::vector<T>\&\ lista)\ \{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}\ (inicio\ >\ fim)\ \{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00022}00022\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ meio\ =\ (inicio\ +\ fim)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(lista[meio]\ ==\ elemento)\{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(lista[meio]\ <\ elemento)\ \{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Busca\_binaria(inicio,\ meio\ -\/\ 1,\ elemento,\ lista);}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(lista[meio]\ >\ elemento)\{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Busca\_binaria(meio\ +\ 1,\ fim,\ elemento,\ lista);}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00045}00045\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00046}00046\ \textcolor{keywordtype}{bool}\ Busca\_iterativa(std::vector<T>\&\ lista,T\ elemento)\{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i<lista.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(lista[i]\ ==\ elemento)\{}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_busca_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

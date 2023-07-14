@@ -19,7 +19,7 @@ string Stack::top(){
     };
 }
 bool Stack::find(Musica elemento){
-    for(int i = 0; i<elementos.size(); i++){
+    for(unsigned int i = 0; i<elementos.size(); i++){
         if(elementos[i].getTitulo() == elemento.getTitulo()){
             return true;
         }
@@ -48,7 +48,7 @@ int Stack::getSize(){
     return elementos.size();
 }
 void Stack::imprimirElmentos(){
-    for(int i = 0; i<elementos.size();i++){
+    for(unsigned int i = 0; i<elementos.size();i++){
         cout << elementos[i].getTitulo() << " ";
     };
 }

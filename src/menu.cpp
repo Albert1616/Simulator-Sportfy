@@ -5,7 +5,7 @@
 using namespace std;
 const string password = "1234";
 
-void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
+void menu(vector<Musica> &lst_musicas, vector<Artista> &lst_artista)
 {
     setlocale(LC_ALL, "portuguese");
     int op;
@@ -52,10 +52,12 @@ void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
                     string name = "", genero = "", nameArtista = "";
                     int ano, numprod;
                     cout << "Digite o nome da música" << endl;
-                    cin >> name;
+                    cin.ignore();
+                    getline(cin, name);
                     system("cls");
                     cout << "Digite o gênero da música" << endl;
-                    cin >> genero;
+                    cin.ignore();
+                    getline(cin, genero);
                     system("cls");
                     cout << "Digite o ano de lançamento da música" << endl;
                     cin >> ano;
@@ -64,18 +66,21 @@ void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
                     cin >> numprod;
                     system("cls");
                     cout << "Digite o nome do artista" << endl;
-                    cin >> nameArtista;
+                    cin.ignore();
+                    getline(cin, nameArtista);
                     system("cls");
                     Artista a(nameArtista);
                     Musica m(name, ano, genero, numprod, a);
-                    lst_músicas.push_back(m);
+                    lst_musicas.push_back(m);
+                    cout << "Música cadastrada com sucesso! " << endl;
                 }
                 else if (op_adm == 2)
                 {
                     string op = "";
                     string name = "";
                     cout << "Digite o nome do artista" << endl;
-                    cin >> name;
+                    cin.ignore();
+                    getline(cin, name);
                     system("cls");
                     Artista a(name);
                     while (op != "s" && op != "n")
@@ -90,51 +95,68 @@ void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
                     }
                     if (op == "s")
                     {
-                        int op_música;
-                        cout << "Músicas disponíveis: " << endl;
-                        for (int i = 0; i < lst_músicas.size(); i++)
-                        {
-                            cout << i + 1 << ": " << lst_músicas[i].getTitulo() << endl;
-                        }
+                        int op_musica;
                         do
                         {
-                            int op;
+                            system("cls");
+                            cout << "Músicas disponíveis: " << endl;
+                            for (unsigned int i = 0; i < lst_musicas.size(); i++)
+                            {
+                                cout << i + 1 << ": " << lst_musicas[i].getTitulo() << endl;
+                            }
+                            unsigned int op;
                             cout << "Qual o número da música que você deseja adicionar ao artista?" << endl;
                             cin >> op;
                             system("cls");
-                            if (op >= 0 && op < lst_músicas.size())
+                            if (op < lst_musicas.size())
                             {
-                                a.adicionarMusica(lst_músicas[op]);
+                                a.adicionarMusica(lst_musicas[op]);
                                 cout << "Música adicionada com sucesso!" << endl;
-                                cout << "Se deseja adicionar outra música para o artista, digite 1. Caso contrário, digite qualquer outra tecla." << endl;
-                                cin >> op_música;
+                                cout << "Se deseja adicionar outra música para o artista, digite 1. Caso contrário, digite 0." << endl;
+                                cin >> op_musica;
                                 system("cls");
                             }
                             else
                             {
                                 cout << "Este número não existe! Digite um número válido." << endl;
-                                op_música = 1;
+                                op_musica = 1;
                             }
-                        } while (op_música == 1);
+                        } while (op_musica != 0);
                         cout << "Artista adicionado com sucesso!" << endl;
+                        lst_artista.push_back(a);
                     }
                     else
                     {
                         cout << "Artista adicionado com sucesso!" << endl;
+                        lst_artista.push_back(a);
                     }
                 }
                 else if (op_adm == 3)
                 {
-                    for (int i = 0; i < lst_músicas.size(); i++)
+                    if (lst_musicas.size() == 0)
                     {
-                        cout << i << ":" << lst_músicas[i].getTitulo() << endl;
+                        cout << "O sistema não possui musicas cadastradas" << endl;
+                    }
+                    else
+                    {
+                        for (unsigned int i = 0; i < lst_musicas.size(); i++)
+                        {
+                            cout << i << ":" << lst_musicas[i].getTitulo() << endl;
+                        }
                     }
                 }
                 else if (op_adm == 4)
                 {
-                    for (int i = 0; i < lst_artista.size(); i++)
+                    if (lst_artista.size() == 0)
                     {
-                        cout << i << ":" << lst_artista[i].getNome() << endl;
+                        cout << "O sistema não possui artistas cadastrados" << endl;
+                    }
+                    else
+                    {
+                        for (unsigned int i = 0; i < lst_artista.size(); i++)
+                        {
+                            cout << i << ":" << lst_artista[i].getNome() << endl;
+                        }
                     }
                 }
                 else if (op_adm == 0)
@@ -186,27 +208,27 @@ void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
                 system("cls");
                 if (op_user == 1)
                 {
-                    int op;
+                    unsigned int op;
                     while (true)
                     {
                         cout << "Músicas disponíveis: " << endl;
-                        for (int i = 0; i < lst_músicas.size(); i++)
+                        for (unsigned int i = 0; i < lst_musicas.size(); i++)
                         {
-                            cout << i << ": " << lst_músicas[i].getTitulo() << endl;
+                            cout << i << ": " << lst_musicas[i].getTitulo() << endl;
                         }
                         cout << "Qual o número da música que você deseja adicionar?" << endl;
                         cin >> op;
                         system("cls");
-                        if (op >= 0 && op < lst_músicas.size())
+                        if (op < lst_musicas.size())
                         {
-                            if (p.buscarMusica(lst_músicas[op]))
+                            if (p.buscarMusica(lst_musicas[op]))
                             {
                                 cout << "Essa música ja está na sua playlist!" << endl;
                                 break;
                             }
                             else
                             {
-                                p.adicionarMusica(lst_músicas[op]);
+                                p.adicionarMusica(lst_musicas[op]);
                                 cout << "Música adicionada com sucesso!" << endl;
                                 break;
                             }
@@ -249,18 +271,18 @@ void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
                 }
                 else if (op_user == 3)
                 {
-                    int op;
+                    unsigned int op;
                     while (true)
                     {
                         cout << "Artistas disponíveis: " << endl;
-                        for (int i = 0; i < lst_artista.size(); i++)
+                        for (unsigned int i = 0; i < lst_artista.size(); i++)
                         {
                             cout << i << ": " << lst_artista[i].getNome() << endl;
                         }
                         cout << "Qual o número do artista que você deseja adicionar?" << endl;
                         cin >> op;
                         system("cls");
-                        if (op >= 0 && op < lst_artista.size())
+                        if (op < lst_artista.size())
                         {
                             p.adicionarArtista(lst_artista[op]);
                             cout << "Artista adicionado com sucesso!" << endl;
@@ -290,17 +312,10 @@ void menu(vector<Musica> &lst_músicas, vector<Artista> &lst_artista)
                             system("cls");
                             if (op >= 0 && op < p.numArtistas())
                             {
-                                if (p.buscarArtista(lst_artista[op].getNome()))
-                                {
-                                    cout << "Este artista ja está entre os seus favoritos!" << endl;
-                                    break;
-                                }
-                                else
-                                {
-                                    p.removerArtista(lst_artista[op]);
-                                    cout << "Artista removido com sucesso!" << endl;
-                                    break;
-                                }
+                                vector<Artista> aux = p.getArtistas();
+                                p.removerArtista(aux[op]);
+                                cout << "Artista removido com sucesso!" << endl;
+                                break;
                             }
                             else
                             {

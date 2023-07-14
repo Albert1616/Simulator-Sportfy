@@ -1,0 +1,325 @@
+\hypertarget{class_artista}{}\doxysection{Artista Class Reference}
+\label{class_artista}\index{Artista@{Artista}}
+
+
+Classe que representa um artista.  
+
+
+
+
+{\ttfamily \#include $<$Artista.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_artista_a91b338083b7d1686efd6328de9165ecc}{Artista}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \mbox{\hyperlink{class_artista}{Artista}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_artista_a8b4eb1cdc9454e69a569e9e00bd5051e}{Artista}} (string n)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{class_artista}{Artista}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_artista_a928322fdec85d2037675aa15945e0444}{$\sim$\+Artista}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{class_artista}{Artista}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_artista_a84bbeb895ec767bcfc7b1d71ce8ef837}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do artista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_artista_aa2887ab9318f268793def44bafe58281}{adicionar\+Musica}} (\mbox{\hyperlink{class_musica}{Musica}} m)
+\begin{DoxyCompactList}\small\item\em Adiciona uma música à pilha de músicas do artista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_artista_ade86a1ba4f34b37a69addbbaccea3891}{imprimi\+Musicas}} ()
+\begin{DoxyCompactList}\small\item\em Imprime as músicas do artista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_artista_aed79c7d1f04d3e38704cc807248b719e}{operator==}} (const \mbox{\hyperlink{class_artista}{Artista}} \&a1, const \mbox{\hyperlink{class_artista}{Artista}} \&a2)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de igualdade (==) para comparar dois artistas. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{class_artista_aca4103a6c756381a177d2146d154572f}{operator$<$$<$}} (std\+::ostream \&obj, const \mbox{\hyperlink{class_artista}{Artista}} \&m)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de impressão (\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}) para exibir um artista. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_artista_ab5868dfc1ef80292f1b56dd5c19057ee}{operator$<$}} (const \mbox{\hyperlink{class_artista}{Artista}} \&m1, const \mbox{\hyperlink{class_artista}{Artista}} \&m2)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de menor que (\texorpdfstring{$<$}{<}) para comparar dois artistas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_artista_a170231613f0d09fe8dfe087209396733}{operator$>$}} (const \mbox{\hyperlink{class_artista}{Artista}} \&m1, const \mbox{\hyperlink{class_artista}{Artista}} \&m2)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de maior que (\texorpdfstring{$>$}{>}) para comparar dois artistas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa um artista. 
+
+Definition at line \mbox{\hyperlink{_artista_8h_source_l00015}{15}} of file \mbox{\hyperlink{_artista_8h_source}{Artista.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_artista_a91b338083b7d1686efd6328de9165ecc}\label{class_artista_a91b338083b7d1686efd6328de9165ecc}} 
+\index{Artista@{Artista}!Artista@{Artista}}
+\index{Artista@{Artista}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{Artista()}{Artista()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Artista\+::\+Artista (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \mbox{\hyperlink{class_artista}{Artista}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ this-\/>nome\ =\ \textcolor{stringliteral}{"{}Desconhecido"{}};}
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_artista_a8b4eb1cdc9454e69a569e9e00bd5051e}\label{class_artista_a8b4eb1cdc9454e69a569e9e00bd5051e}} 
+\index{Artista@{Artista}!Artista@{Artista}}
+\index{Artista@{Artista}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{Artista()}{Artista()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Artista\+::\+Artista (\begin{DoxyParamCaption}\item[{string}]{n }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{class_artista}{Artista}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Nome do artista. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>nome\ =\ n;}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_artista_a928322fdec85d2037675aa15945e0444}\label{class_artista_a928322fdec85d2037675aa15945e0444}} 
+\index{Artista@{Artista}!````~Artista@{$\sim$Artista}}
+\index{````~Artista@{$\sim$Artista}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{$\sim$Artista()}{~Artista()}}
+{\footnotesize\ttfamily Artista\+::$\sim$\+Artista (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \mbox{\hyperlink{class_artista}{Artista}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_artista_aa2887ab9318f268793def44bafe58281}\label{class_artista_aa2887ab9318f268793def44bafe58281}} 
+\index{Artista@{Artista}!adicionarMusica@{adicionarMusica}}
+\index{adicionarMusica@{adicionarMusica}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{adicionarMusica()}{adicionarMusica()}}
+{\footnotesize\ttfamily void Artista\+::adicionar\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_musica}{Musica}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma música à pilha de músicas do artista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A música a ser adicionada. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>musicas.\mbox{\hyperlink{class_stack_a0b8f9d25a4157a831775e1867fb80943}{push}}(m);}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_artista_a84bbeb895ec767bcfc7b1d71ce8ef837}\label{class_artista_a84bbeb895ec767bcfc7b1d71ce8ef837}} 
+\index{Artista@{Artista}!getNome@{getNome}}
+\index{getNome@{getNome}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily string Artista\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome do artista. 
+
+\begin{DoxyReturn}{Returns}
+O nome do artista. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>nome;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_artista_ade86a1ba4f34b37a69addbbaccea3891}\label{class_artista_ade86a1ba4f34b37a69addbbaccea3891}} 
+\index{Artista@{Artista}!imprimiMusicas@{imprimiMusicas}}
+\index{imprimiMusicas@{imprimiMusicas}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{imprimiMusicas()}{imprimiMusicas()}}
+{\footnotesize\ttfamily void Artista\+::imprimi\+Musicas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime as músicas do artista. 
+
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ this-\/>musicas.\mbox{\hyperlink{class_stack_a0b35ff31811815078e460ae6db347e9c}{imprimirElmentos}}();}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_artista_ab5868dfc1ef80292f1b56dd5c19057ee}\label{class_artista_ab5868dfc1ef80292f1b56dd5c19057ee}} 
+\index{Artista@{Artista}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_artista}{Artista}} \&}]{m1,  }\item[{const \mbox{\hyperlink{class_artista}{Artista}} \&}]{m2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de menor que (\texorpdfstring{$<$}{<}) para comparar dois artistas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & O primeiro artista a ser comparado. \\
+\hline
+{\em m2} & O segundo artista a ser comparado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o primeiro artista for menor que o segundo, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ m1.nome\ <\ m2.nome;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_artista_aca4103a6c756381a177d2146d154572f}\label{class_artista_aca4103a6c756381a177d2146d154572f}} 
+\index{Artista@{Artista}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{obj,  }\item[{const \mbox{\hyperlink{class_artista}{Artista}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de impressão (\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}) para exibir um artista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & O objeto de saída do fluxo. \\
+\hline
+{\em m} & O artista a ser exibido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A referência para o objeto de saída do fluxo. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ obj\ <<\ m.nome;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ obj;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_artista_aed79c7d1f04d3e38704cc807248b719e}\label{class_artista_aed79c7d1f04d3e38704cc807248b719e}} 
+\index{Artista@{Artista}!operator==@{operator==}}
+\index{operator==@{operator==}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_artista}{Artista}} \&}]{a1,  }\item[{const \mbox{\hyperlink{class_artista}{Artista}} \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de igualdade (==) para comparar dois artistas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a1} & O primeiro artista a ser comparado. \\
+\hline
+{\em a2} & O segundo artista a ser comparado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se os artistas forem iguais, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ nome1\ =\ a1.nome;}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ nome2\ =\ a2.nome;}
+\DoxyCodeLine{00025\ \ \ \ \ std::transform(nome1.begin(),\ nome1.end(),\ nome1.begin(),\ ::tolower);}
+\DoxyCodeLine{00026\ \ \ \ \ std::transform(nome2.begin(),\ nome2.end(),\ nome2.begin(),\ ::tolower);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ nome1\ ==\ nome2;}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_artista_a170231613f0d09fe8dfe087209396733}\label{class_artista_a170231613f0d09fe8dfe087209396733}} 
+\index{Artista@{Artista}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Artista@{Artista}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_artista}{Artista}} \&}]{m1,  }\item[{const \mbox{\hyperlink{class_artista}{Artista}} \&}]{m2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de maior que (\texorpdfstring{$>$}{>}) para comparar dois artistas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & O primeiro artista a ser comparado. \\
+\hline
+{\em m2} & O segundo artista a ser comparado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o primeiro artista for maior que o segundo, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artista_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_artista_8cpp_source}{Artista.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ m1.nome\ >\ m2.nome;}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Artista.\+h\item 
+src/Artista.\+cpp\end{DoxyCompactItemize}
