@@ -21,7 +21,7 @@ Para a ordenação dos conjuntos, forma ultilizados três métodos diferentes de
 - C++
  
 # Como executar o projeto
-- Basta executar o comando 'make' na pasta /Makefile
+- Basta executar o comando 'make run' na pasta /Makefile
 
 # clonar repositório
 - git clone https://github.com/Albert1616/Simulator-Sportify
@@ -29,4 +29,4 @@ Para a ordenação dos conjuntos, forma ultilizados três métodos diferentes de
 # Autor
 Matheus Albert da Silva Araújo
 
---linkedin
+https://www.linkedin.com/in/matheus-ara%C3%BAjotec/
